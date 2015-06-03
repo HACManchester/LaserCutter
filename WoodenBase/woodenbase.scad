@@ -27,7 +27,7 @@ module top_mounts()
     for(x=[wood_depth/2, 400+wood_depth+(wood_depth/2), laser_width-(wood_depth/2)])
       for(y=[120, (laser_depth+175-wood_depth-160)/2, (laser_depth+175-wood_depth+160)/2, laser_depth+175-wood_depth-120])
         translate([x, y])
-          circle(d=6);
+          circle(d=6.5);
 
     // back support pegs
     for(x=[20,((laser_width-50)/2)-160,((laser_width-50)/2)+160,laser_width-50-20])
@@ -37,7 +37,7 @@ module top_mounts()
     // back support bolts
     for(x=[120,(laser_width/2)-80,(laser_width/2)+80,laser_width-120])
       translate([x, laser_depth+175-(wood_depth/2)])
-        circle(d=6);
+        circle(d=6.5);
   }
 }
 
@@ -67,7 +67,7 @@ module top()
     }
 
     // holes for air assist + water cooling loop pipes
-    for (y=[25,75,125]) translate([wood_depth+20, laser_depth+y]) circle(d=14);
+    for (y=[25,50,75]) translate([wood_depth+20, laser_depth+y]) circle(d=14);
 
     // hole for power cables
     translate([laser_width-wood_depth-50, laser_depth+175/2]) circle(d=50);
@@ -186,6 +186,20 @@ module front()
   #for(x=[-20,20])
     translate([((510-wood_depth)/2)+x, base_height-18-18-25])
       circle(d=20);
+  }
+}
+
+module shelf()
+{
+  difference()
+  {
+    square([510-(wood_depth/2)-20, laser_depth]);
+    hull()
+    {
+      for (x=[-50,50])
+        translate([((510-wood_depth-20)/2)+x, 50])
+          circle(d=50);
+    }
   }
 }
 

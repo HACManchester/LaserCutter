@@ -17,10 +17,10 @@ color("blue")
 color("yellow")
 {
   translate([0, laser_depth+175, 0]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) back();
-  translate([wood_depth, wood_depth, wood_depth]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) front();
+//  translate([wood_depth, wood_depth, wood_depth]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) front();
 }
 
-color("orange")
+color("orange",0.4)
 {
   translate([0,0,base_height]) cube([laser_width, laser_depth, laser_height]);
 }
@@ -38,4 +38,9 @@ color("black")
     for(y=[50, laser_depth+175-70-50])
       translate([x,y,-70])
         cube([50,70,70]);
+}
+
+color ("green")
+{
+  translate([wood_depth+10,wood_depth*2,wood_depth+5]) linear_extrude(height=wood_depth) shelf();
 }
