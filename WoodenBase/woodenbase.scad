@@ -47,12 +47,16 @@ module top()
   difference()
   {
     top_mounts();
+
+    // holes for spines on base of laser
     for(x=[125, 555, 700])
       translate([x, 4])
         square([60, laser_depth-8]);
 
+    // Extraction entry hole
     translate([360+(156/2), laser_depth+175-(156/2)-wood_depth-2])circle(d=156);
 
+    // extraction exit hole + mounting screws
     translate([120,laser_depth])
     {
       for(x=[-13, 183])
@@ -61,7 +65,12 @@ module top()
             circle(d=6);
       square([170, 100]);
     }
+
+    // holes for air assist + water cooling loop pipes
     for (y=[25,75,125]) translate([wood_depth+20, laser_depth+y]) circle(d=14);
+
+    // hole for power cables
+    translate([laser_width-wood_depth-50, laser_depth+175/2]) circle(d=50);
   }
 }
 
@@ -131,7 +140,13 @@ module leftside()
 
 module middleside()
 {
+  difference()
+  {
     side();
+
+    // holes for power cables
+    #translate([wood_depth+50, laser_depth+175/2]) circle(d=50);
+  }
 }
 
 module back()
