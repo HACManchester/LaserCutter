@@ -18,7 +18,7 @@ module top_mounts()
     top_blank();
 
     // sides and central support pegs
-    for(x=[0,400+wood_depth,laser_width-wood_depth])
+    for(x=[0,(510+wood_depth/2),laser_width-wood_depth])
       for(y=[20, (laser_depth+175-wood_depth-50)/2, laser_depth+175-wood_depth-50-20])
         translate([x, y])
           square([wood_depth, 50]);
@@ -51,7 +51,7 @@ module top()
       translate([x, 4])
         square([60, laser_depth-8]);
 
-    translate([360+(156/2), laser_depth+175-(156/2)])circle(d=156);
+    translate([360+(156/2), laser_depth+175-(156/2)-wood_depth-2])circle(d=156);
 
     translate([120,laser_depth])
     {
@@ -131,16 +131,7 @@ module leftside()
 
 module middleside()
 {
-  difference()
-  {
     side();
-    hull()
-    for(y=[10,120])
-    translate([base_height/2,(laser_depth+(175-wood_depth)/2)-y])
-    {
-      circle(d=156);
-    }
-  }
 }
 
 module back()
@@ -166,6 +157,9 @@ module back()
         circle(d=10);
         translate([-3,-30])square([6,60]);
       }
+
+      // fan electricity hole
+      translate([175,base_height-95]) square([140, 70]);
     }
 }
 
@@ -173,9 +167,9 @@ module front()
 {
   difference()
   {
-  square([400, base_height-18-18]);
+  square([510-(wood_depth/2), base_height-18-18]);
   #for(x=[-20,20])
-    translate([200+x, base_height-18-18-25])
+    translate([((510-wood_depth)/2)+x, base_height-18-18-25])
       circle(d=20);
   }
 }

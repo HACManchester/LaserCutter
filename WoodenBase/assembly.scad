@@ -10,7 +10,7 @@ translate([0, 0, 0]) linear_extrude(height=wood_depth) bottom();
 color("blue")
 {
   translate([0, 0, base_height]) rotate([0, 90, 0]) linear_extrude(height=wood_depth) leftside();
-  translate([400+wood_depth, 0, base_height]) rotate([0, 90, 0]) linear_extrude(height=wood_depth) middleside();
+  translate([(510+wood_depth/2), 0, base_height]) rotate([0, 90, 0]) linear_extrude(height=wood_depth) middleside();
   translate([laser_width-wood_depth, 0, base_height]) rotate([0, 90, 0]) linear_extrude(height=wood_depth) side();
 }
 
@@ -28,7 +28,11 @@ color("orange")
 color("black")
 {
   translate([120,laser_depth-134,base_height-wood_depth-235])
-  cube([210, 264, 235]);
+  union()
+  {
+    cube([210, 264, 235]);
+    translate([210-20-125,264,235-12-60]) cube([125,50,60]);
+  }
 
   for(x=[50, laser_width-50-50])
     for(y=[50, laser_depth+175-70-50])
