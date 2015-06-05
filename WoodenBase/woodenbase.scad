@@ -24,7 +24,7 @@ module top_mounts()
           square([wood_depth, 50]);
 
     // sides and central support bolts
-    for(x=[wood_depth/2, 400+wood_depth+(wood_depth/2), laser_width-(wood_depth/2)])
+    for(x=[wood_depth/2, 510+wood_depth, laser_width-(wood_depth/2)])
       for(y=[120, (laser_depth+175-wood_depth-160)/2, (laser_depth+175-wood_depth+160)/2, laser_depth+175-wood_depth-120])
         translate([x, y])
           circle(d=6.5);

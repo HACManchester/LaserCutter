@@ -17,7 +17,7 @@ color("blue")
 color("yellow")
 {
   translate([0, laser_depth+175, 0]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) back();
-//  translate([wood_depth, wood_depth, wood_depth]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) front();
+  translate([wood_depth, wood_depth, wood_depth]) rotate([90, 0, 0]) linear_extrude(height=wood_depth) front();
 }
 
 color("orange",0.4)
