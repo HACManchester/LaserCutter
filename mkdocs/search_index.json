@@ -1,0 +1,189 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Manchester Hacspace Laser Cutter\n\n\nTODO", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#manchester-hacspace-laser-cutter", 
+            "text": "TODO", 
+            "title": "Manchester Hacspace Laser Cutter"
+        }, 
+        {
+            "location": "/PCB/Overview/", 
+            "text": "Overview\n\n\nFor homebrew PCB\ns there are a few different approaches.\nThis includes the toner transfer / iron method, the toner transfer / Laminator approach (which is more accurate).\n\n\nOne approach is to use a laser cutter to remove paint from a Copper board, then etch the board.\nThis can however require a few tricks to get it right.\n\n\n\n\nPrepping the Copper Board\n\n\nDesign KiCad\n\n\nEngraving the Board with the Laser\n\n\nCleaning the Board\n\n\nUsing the Etching Tank\n\n\nFurther Ideas\n\n\nLinks\n\n\n\n\nBenefits\n\n\n\n\nAccuracy\n\n\nRepeatibility\n\n\nDual sided boards (with via\ns) / Alignment\n\n\nPossibly Solder Masks with Glass paint, using the laser to remove paint on the exposed pads", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/PCB/Overview/#overview", 
+            "text": "For homebrew PCB s there are a few different approaches.\nThis includes the toner transfer / iron method, the toner transfer / Laminator approach (which is more accurate).  One approach is to use a laser cutter to remove paint from a Copper board, then etch the board.\nThis can however require a few tricks to get it right.   Prepping the Copper Board  Design KiCad  Engraving the Board with the Laser  Cleaning the Board  Using the Etching Tank  Further Ideas  Links", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/PCB/Overview/#benefits", 
+            "text": "Accuracy  Repeatibility  Dual sided boards (with via s) / Alignment  Possibly Solder Masks with Glass paint, using the laser to remove paint on the exposed pads", 
+            "title": "Benefits"
+        }, 
+        {
+            "location": "/PCB/CopperBoard-Prep/", 
+            "text": "Prepping the Copper Board\n\n\nUnwrap the Board\n\n\n\n\nFirst pull off the plastic from the copper board\n\n\nNext prep the board by roughing it up, perhaps by dipping it into etchant, or using a roughing stone\n\n\nNext clean the board with acetone\n\n\n\n\nOne suggestion is to use auto primer to make the paint stick the board better\n\n\nSpray the Board\n\n\nNext we need to spray the board. \n\nThe general view is that the more coats of paint the better, and that there should be at least 2 coats\nso that when removing the invisible layer left by the laser the smaller traces can remain on the board during cleaning\n\n\nPaint Types\n\n\nThere\ns a few different suggestions on the types of paint.\nThe main two mentioned in the links are\n\n\n\n\nBlack Auto primer (car paint I think)\n\n\nRustoleum Painters Touch 2xCoverage paint\n\n\n\n\nThere\ns also\n\n\n\n\nhttp://hackaday.com/2010/08/17/negative-laser-etching/\n\n\nBlack acrylic spray paint (Krylon brand) - suggested on instructables\n\n\nPlastifier mask (acrylic varnish / plastifiant)\n\n\n\n\nI\nve also got some black acrylic paint from WHS Smiths to try out (Humbrol).\nFor black acrylic paint, the suggestion is to use 3 - 5 coats allowing time for each coat to dry.", 
+            "title": "Prepping the Board"
+        }, 
+        {
+            "location": "/PCB/CopperBoard-Prep/#prepping-the-copper-board", 
+            "text": "", 
+            "title": "Prepping the Copper Board"
+        }, 
+        {
+            "location": "/PCB/CopperBoard-Prep/#unwrap-the-board", 
+            "text": "First pull off the plastic from the copper board  Next prep the board by roughing it up, perhaps by dipping it into etchant, or using a roughing stone  Next clean the board with acetone   One suggestion is to use auto primer to make the paint stick the board better", 
+            "title": "Unwrap the Board"
+        }, 
+        {
+            "location": "/PCB/CopperBoard-Prep/#spray-the-board", 
+            "text": "Next we need to spray the board.  \nThe general view is that the more coats of paint the better, and that there should be at least 2 coats\nso that when removing the invisible layer left by the laser the smaller traces can remain on the board during cleaning", 
+            "title": "Spray the Board"
+        }, 
+        {
+            "location": "/PCB/CopperBoard-Prep/#paint-types", 
+            "text": "There s a few different suggestions on the types of paint.\nThe main two mentioned in the links are   Black Auto primer (car paint I think)  Rustoleum Painters Touch 2xCoverage paint   There s also   http://hackaday.com/2010/08/17/negative-laser-etching/  Black acrylic spray paint (Krylon brand) - suggested on instructables  Plastifier mask (acrylic varnish / plastifiant)   I ve also got some black acrylic paint from WHS Smiths to try out (Humbrol).\nFor black acrylic paint, the suggestion is to use 3 - 5 coats allowing time for each coat to dry.", 
+            "title": "Paint Types"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/", 
+            "text": "Kicad - Design\n\n\nThe below lists the steps needed to export a KiCad PCB for use with the laser cutter.\n\n\nPCB Design\n\n\nThe first step is to open the PCB Design within KiCad\n\n\n \n\n\nExport Top Layer\n\n\nNext we\nre going to export the top layer as an SVG image\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nIt\ns best to avoid the use of the File -\n Export Svg option since that doesn\nt allow for a negative to be created, instead we\nre going to use Plot\n\n\n\n\n\n\nIt\ns also best to draw a square around the board on the \nEdge Cuts\n Layer, make sure it doesn\nt come into contact with any of the pins\n\n\n\n\n\n\n\n\n\n\nSelect \nFile -\n Plot\n\n\nSelect the Front Copper Layer on the left\n\n\nSelect the Output directory \nsvg/\n\n\nSelect Drill marks: \nSmall\n\n\nNegative plot: \nTicked\n\n\nMirrored Plot: \nUnticked\n for the front layer\n\n\nExclude PCB edge layer from other layers: \nUnticked\n To include the Outer cut line\n\n\n\n\n \n\n\nClick \nPlot\n to export the svg\n\n\nExport Bottom Layer\n\n\nNext for the bottom layer repeat as above but make the following changes\n\n\n\n\nSelect the Bottom Copper Layer on the left, unselect the Front Layer\n\n\nMirrored Plot: \nTicked\n for the bottom layer\n\n\n\n\n \n\n\nClick \nPlot\n to export the svg\n\n\nInkscape Edit\n\n\nNext we need to resize a couple of things within inkscape.\n\n\nFirst we want to resize the actual Document\n\n\n\n\nOpen each svg within inkscape\n\n\nOpen up File -\n Document Properties\n\n\nSelect the white box surrounding the Board\n\n\nExpand the \nResize page to content\n\n\nClick \nResize page to drawing or selection\n with the white outer box selected\n\n\n\n\n \n\n\nNext we need to resize the big black box that surrounds the box so that it fits within the document, this is acting as a mask\n\n\n\n\nSelect the white outline box, and select \nEdit -\n Copy\n\n\nSelect the Outer black box and Select \nEdit -\n Paste Size -\n Paste Size\n\n\nAt the top Enter X: 0 Y: 0 to position the box at the bottom left corner\n\n\n\n\n \n\n\nExamples\n\n\nSome svg\ns of adafruit\ns pcb ruler for testing how small can we go\n\n\n\n\nhttps://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg\n\n\n\n\nA test of the pcb I replicated from the arduino cnc project, I\nve got no plan on using this (just created it to confirm the wiring is what I thought it was), but maybe a good test\n\n\n\n\nFront Layer\n\n\nBack Layer\n\n\n\n\nTODO\n\n\n\n\nNone of this is tested so far\n\n\nOne suggestion is that lines should be no thinner than 1.5pt, 5pt font. Further experimentation is needed\n\n\nI could do with trying to print adafruit\ns PCB ruler as a test.", 
+            "title": "Design KiCad"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#kicad-design", 
+            "text": "The below lists the steps needed to export a KiCad PCB for use with the laser cutter.", 
+            "title": "Kicad - Design"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#pcb-design", 
+            "text": "The first step is to open the PCB Design within KiCad", 
+            "title": "PCB Design"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#export-top-layer", 
+            "text": "Next we re going to export the top layer as an SVG image     Notes      It s best to avoid the use of the File -  Export Svg option since that doesn t allow for a negative to be created, instead we re going to use Plot    It s also best to draw a square around the board on the  Edge Cuts  Layer, make sure it doesn t come into contact with any of the pins      Select  File -  Plot  Select the Front Copper Layer on the left  Select the Output directory  svg/  Select Drill marks:  Small  Negative plot:  Ticked  Mirrored Plot:  Unticked  for the front layer  Exclude PCB edge layer from other layers:  Unticked  To include the Outer cut line      Click  Plot  to export the svg", 
+            "title": "Export Top Layer"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#export-bottom-layer", 
+            "text": "Next for the bottom layer repeat as above but make the following changes   Select the Bottom Copper Layer on the left, unselect the Front Layer  Mirrored Plot:  Ticked  for the bottom layer      Click  Plot  to export the svg", 
+            "title": "Export Bottom Layer"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#inkscape-edit", 
+            "text": "Next we need to resize a couple of things within inkscape.  First we want to resize the actual Document   Open each svg within inkscape  Open up File -  Document Properties  Select the white box surrounding the Board  Expand the  Resize page to content  Click  Resize page to drawing or selection  with the white outer box selected      Next we need to resize the big black box that surrounds the box so that it fits within the document, this is acting as a mask   Select the white outline box, and select  Edit -  Copy  Select the Outer black box and Select  Edit -  Paste Size -  Paste Size  At the top Enter X: 0 Y: 0 to position the box at the bottom left corner", 
+            "title": "Inkscape Edit"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#examples", 
+            "text": "Some svg s of adafruit s pcb ruler for testing how small can we go   https://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg   A test of the pcb I replicated from the arduino cnc project, I ve got no plan on using this (just created it to confirm the wiring is what I thought it was), but maybe a good test   Front Layer  Back Layer", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/PCB/Design-KiCad/#todo", 
+            "text": "None of this is tested so far  One suggestion is that lines should be no thinner than 1.5pt, 5pt font. Further experimentation is needed  I could do with trying to print adafruit s PCB ruler as a test.", 
+            "title": "TODO"
+        }, 
+        {
+            "location": "/PCB/Laser-Etching/", 
+            "text": "Laser Etching\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\n\n\n\n\n\n\nThe information here should be for now considered experimental / theoretical / untested.\n\n\n\n\n\n\nIt\ns important to make sure we don\nt get reflections back into the laser cutter optics from the copper\n\n\n\n\n\n\nTry to use a highest speed / lowest power as possible to avoid reflections\n\n\n\n\n\n\nIt\ns probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.\n\n\n\n\n\n\n\n\nImport into Visicut\n\n\nAt this point we can now import each svg from KiCad into Visicut\n\n\n\n\nOpen up Visicut\n\n\nDrag and Drop the svg into Visicut\n\n\nSelect the Position tab at the bottom right\n\n\nEnter Values in for X and Y, these need to be consistant when marking both layers\n\n\n\n\n \n\n\n\n\nSelect \nMap by Single Property\n\n\nSelect \nMap by Type\n\n\nTick next to \nShape\n and select \nEngrave Solid\n\n\n\n\n \n\n\nNotes\n\n\nIt\ns not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.\nBut we can use the Etch method by burning away paint from the PCB.\nTo burn away copper with the laser would probably require oxygen assist, or a fibre laser.\n\n\n\n\nWe need to try avoiding going over the board multiple times, this can lead to unpredictable results\n\n\nPower should be low as possible, Speed as high as possible, we need to avoid reflections into the optics\n\n\nThe air assist should blow onto the part while it\ns being cut, according to Bob the vacume is located at the bottom so cutting top to bottom should be okay \n\n\nOne thing to watch out for is if the evaporated paint from the engrave blows over an area already engraved and settles this can interfere with the engraving\n\n\n\n\nTODO\n\n\n\n\nTry a Z Height from the top of the board to the laser, instead of using the bed as the zero point\n\n\nTry different speeds / powers, starting with the lowest power / highest speed first\n\n\nsome users have managed it with a 1W / 2W Laser LED, try 5% first perhaps", 
+            "title": "Laser Engraving"
+        }, 
+        {
+            "location": "/PCB/Laser-Etching/#laser-etching", 
+            "text": "Important      The information here should be for now considered experimental / theoretical / untested.    It s important to make sure we don t get reflections back into the laser cutter optics from the copper    Try to use a highest speed / lowest power as possible to avoid reflections    It s probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.", 
+            "title": "Laser Etching"
+        }, 
+        {
+            "location": "/PCB/Laser-Etching/#import-into-visicut", 
+            "text": "At this point we can now import each svg from KiCad into Visicut   Open up Visicut  Drag and Drop the svg into Visicut  Select the Position tab at the bottom right  Enter Values in for X and Y, these need to be consistant when marking both layers       Select  Map by Single Property  Select  Map by Type  Tick next to  Shape  and select  Engrave Solid", 
+            "title": "Import into Visicut"
+        }, 
+        {
+            "location": "/PCB/Laser-Etching/#notes", 
+            "text": "It s not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.\nBut we can use the Etch method by burning away paint from the PCB.\nTo burn away copper with the laser would probably require oxygen assist, or a fibre laser.   We need to try avoiding going over the board multiple times, this can lead to unpredictable results  Power should be low as possible, Speed as high as possible, we need to avoid reflections into the optics  The air assist should blow onto the part while it s being cut, according to Bob the vacume is located at the bottom so cutting top to bottom should be okay   One thing to watch out for is if the evaporated paint from the engrave blows over an area already engraved and settles this can interfere with the engraving", 
+            "title": "Notes"
+        }, 
+        {
+            "location": "/PCB/Laser-Etching/#todo", 
+            "text": "Try a Z Height from the top of the board to the laser, instead of using the bed as the zero point  Try different speeds / powers, starting with the lowest power / highest speed first  some users have managed it with a 1W / 2W Laser LED, try 5% first perhaps", 
+            "title": "TODO"
+        }, 
+        {
+            "location": "/PCB/Cleaning-Board/", 
+            "text": "Cleaning the board\n\n\nIn the areas where the paint has been burnt away there is still a residue left over that needs to be cleaned away \n\nTODO Check with Ruth on this\n\n\nUsing a Q Tip\n\n\n\n\nSoak one end of a q-tip in  rubbing alcohol (ethyl or isopropyl) and spread it on the exposed copper.\n\n\nTry to keep it off of the black paint, because we want that to stay.\n\n\nUse the other end of the q-tip to rub away, essentially polishing off the copper, making it shiny and ready for etching.\n\n\n\n\nUsing the Dremmel\n\n\n\n\nUse a dremmel with a soft wire brush to rub away the invisible layer left by the laser\n\n\n\n\nOther Suggestions\n\n\n\n\nMetholated Spirits for removing the thin layer left behind by brush on paint\n\n\nMineral Turpentine for removing the thin layer left behind by spray on paint", 
+            "title": "Cleaning the Board"
+        }, 
+        {
+            "location": "/PCB/Cleaning-Board/#cleaning-the-board", 
+            "text": "In the areas where the paint has been burnt away there is still a residue left over that needs to be cleaned away  \nTODO Check with Ruth on this", 
+            "title": "Cleaning the board"
+        }, 
+        {
+            "location": "/PCB/Cleaning-Board/#using-a-q-tip", 
+            "text": "Soak one end of a q-tip in  rubbing alcohol (ethyl or isopropyl) and spread it on the exposed copper.  Try to keep it off of the black paint, because we want that to stay.  Use the other end of the q-tip to rub away, essentially polishing off the copper, making it shiny and ready for etching.", 
+            "title": "Using a Q Tip"
+        }, 
+        {
+            "location": "/PCB/Cleaning-Board/#using-the-dremmel", 
+            "text": "Use a dremmel with a soft wire brush to rub away the invisible layer left by the laser", 
+            "title": "Using the Dremmel"
+        }, 
+        {
+            "location": "/PCB/Cleaning-Board/#other-suggestions", 
+            "text": "Metholated Spirits for removing the thin layer left behind by brush on paint  Mineral Turpentine for removing the thin layer left behind by spray on paint", 
+            "title": "Other Suggestions"
+        }, 
+        {
+            "location": "/PCB/Etching-Tank/", 
+            "text": "Etching Tank\n\n\nNow we need to etch away the exposed copper\n\n\nCutting the Board\n\n\n\n\nCut the board to the right size using the bandsaw, this should require less etchant afterwards\n\n\n\n\nEtching the Board\n\n\n\n\nDip the board into Ferric Chloride for 20 - 30 mins\n\n\nuse the Heater to speed up the reaction.\n\n\n\n\nFinal Cleaning\n\n\n\n\nRinse the board with water\n\n\nNext wash the board with Acetone (paint remover)\n\n\nPolish to get rid of the paint\n\n\nTry rubbing the board with a sponge\n\n\nRinse again with water", 
+            "title": "Etching Tank"
+        }, 
+        {
+            "location": "/PCB/Etching-Tank/#etching-tank", 
+            "text": "Now we need to etch away the exposed copper", 
+            "title": "Etching Tank"
+        }, 
+        {
+            "location": "/PCB/Etching-Tank/#cutting-the-board", 
+            "text": "Cut the board to the right size using the bandsaw, this should require less etchant afterwards", 
+            "title": "Cutting the Board"
+        }, 
+        {
+            "location": "/PCB/Etching-Tank/#etching-the-board", 
+            "text": "Dip the board into Ferric Chloride for 20 - 30 mins  use the Heater to speed up the reaction.", 
+            "title": "Etching the Board"
+        }, 
+        {
+            "location": "/PCB/Etching-Tank/#final-cleaning", 
+            "text": "Rinse the board with water  Next wash the board with Acetone (paint remover)  Polish to get rid of the paint  Try rubbing the board with a sponge  Rinse again with water", 
+            "title": "Final Cleaning"
+        }, 
+        {
+            "location": "/PCB/Further-Ideas/", 
+            "text": "Further Ideas\n\n\n\n\nTry burning out drill holes\n\n\nUse coats of Glass paint Pebeo Vitrea for the solder mask / use the laser to remove paint on the pads before final curing\n\n\nAdd docs for Eagle svg export\n\n\nConsult with Ruth on the best approaches to remove the risidual left over paint via IPA\n\n\nFor the paint check what Fred Aldous has available / Halfords", 
+            "title": "Further Ideas"
+        }, 
+        {
+            "location": "/PCB/Further-Ideas/#further-ideas", 
+            "text": "Try burning out drill holes  Use coats of Glass paint Pebeo Vitrea for the solder mask / use the laser to remove paint on the pads before final curing  Add docs for Eagle svg export  Consult with Ruth on the best approaches to remove the risidual left over paint via IPA  For the paint check what Fred Aldous has available / Halfords", 
+            "title": "Further Ideas"
+        }, 
+        {
+            "location": "/PCB/Links/", 
+            "text": "Links\n\n\n\n\nhttp://thelittlebox.co/\n\n\nhttp://www.diyouware.com/\n\n\n\n\nhttp://www.diyouware.com/node/161\n\n\n\n\n\n\nhttp://hackaday.com/2010/08/17/negative-laser-etching/\n\n\n\n\nhttp://www.flickr.com/photos/rileyporter/sets/72157622690487871/with/4393053680/\n\n\nhttps://www.synthetos.com/laser-etched-pcbs/\n\n\nhttps://www.synthetos.com/laser-etched-pcbs-take-2/\n\n\nhttp://yveslebrac.blogspot.co.uk/\n\n\nhttp://www.instructables.com/id/Custom-PCB-Prototyping-using-a-Laser-Cutter/\n\n\nhttp://www.instructables.com/id/PCB-plastic-mask-etching-with-CO2-laser/\n\n\nhttp://forums.reprap.org/read.php?133,235148\n\n\nhttp://nerdclub-uk.blogspot.co.uk/2013/04/laser-etching-pcbs-update-dont-bother.html\n\n\nhttps://www.youtube.com/watch?v=mzmjGz0_joM\n\n\n\n\nhttp://hackaday.com/2011/09/09/laser-etched-pcb-production/\n\n\n\n\n\n\nhttp://hackaday.com/2014/02/03/laser-based-pcb-printer/\n\n\n\n\nhttp://hackaday.com/2013/05/11/laser-cutter-helps-make-dual-sided-pcbs/\n\n\nhttp://hackaday.com/2013/01/22/laser-cut-pcbs/\n\n\nhttp://hackaday.com/2014/02/13/from-schematic-to-pcb-in-four-hours/\n\n\nhttp://hackaday.com/2014/01/31/cnlohr-demos-his-photoetch-pcb-process/\n\n\nhttp://hackaday.com/2014/01/27/toner-transfer-pcbs-double-sided-with-color-silkscreen/\n\n\nhttp://hackaday.com/2014/01/14/creating-pcbs-with-3d-resin-printers/\n\n\nhttp://hackaday.com/2014/01/05/testing-the-limits-of-home-pcb-etching/\n\n\nhttp://hackaday.com/2013/11/02/perfect-pcbs-with-an-inkjet-printer/\n\n\nhttp://hackaday.com/2013/07/29/pcbs-with-powder-coat/\n\n\nhttp://hackaday.com/2011/05/22/bamf2011-lasersaur-is-one-big-laser-cutter/\n\n\nhttp://hackaday.com/2009/10/25/diy-plotter-with-laser/\n\n\n\n\nhttp://hackaday.com/2008/08/03/laser-etching-printed-circuit-boards/\n\n\n\n\n\n\nhttp://hackaday.com/2013/04/03/homebuilt-laser-cutter-ideas/\n\n\n\n\nhttp://hackaday.com/2012/09/10/put-a-solder-mask-on-those-homebrew-pcbs/\n\n\nhttp://hackaday.com/2013/02/07/pcb-production-workshop-means-everyone-gets-an-arduino/\n\n\nhttp://hackaday.com/2012/08/30/etching-your-own-pcbs-at-home/\n\n\nhttp://hackaday.com/2009/10/13/how-to-populate-a-surface-mount-pcb/\n\n\nhttp://hackaday.com/2009/04/21/making-cool-looking-pcbs/\n\n\nhttp://hackaday.com/2008/07/28/how-to-etch-a-single-sided-pcb/\n\n\nhttp://hackaday.com/2008/03/30/pcb-milling-hell-sunday-extra/\n\n\nhttp://hackaday.com/2012/04/30/etching-your-own-boards-really-really-fast/", 
+            "title": "Links"
+        }, 
+        {
+            "location": "/PCB/Links/#links", 
+            "text": "http://thelittlebox.co/  http://www.diyouware.com/   http://www.diyouware.com/node/161    http://hackaday.com/2010/08/17/negative-laser-etching/   http://www.flickr.com/photos/rileyporter/sets/72157622690487871/with/4393053680/  https://www.synthetos.com/laser-etched-pcbs/  https://www.synthetos.com/laser-etched-pcbs-take-2/  http://yveslebrac.blogspot.co.uk/  http://www.instructables.com/id/Custom-PCB-Prototyping-using-a-Laser-Cutter/  http://www.instructables.com/id/PCB-plastic-mask-etching-with-CO2-laser/  http://forums.reprap.org/read.php?133,235148  http://nerdclub-uk.blogspot.co.uk/2013/04/laser-etching-pcbs-update-dont-bother.html  https://www.youtube.com/watch?v=mzmjGz0_joM   http://hackaday.com/2011/09/09/laser-etched-pcb-production/    http://hackaday.com/2014/02/03/laser-based-pcb-printer/   http://hackaday.com/2013/05/11/laser-cutter-helps-make-dual-sided-pcbs/  http://hackaday.com/2013/01/22/laser-cut-pcbs/  http://hackaday.com/2014/02/13/from-schematic-to-pcb-in-four-hours/  http://hackaday.com/2014/01/31/cnlohr-demos-his-photoetch-pcb-process/  http://hackaday.com/2014/01/27/toner-transfer-pcbs-double-sided-with-color-silkscreen/  http://hackaday.com/2014/01/14/creating-pcbs-with-3d-resin-printers/  http://hackaday.com/2014/01/05/testing-the-limits-of-home-pcb-etching/  http://hackaday.com/2013/11/02/perfect-pcbs-with-an-inkjet-printer/  http://hackaday.com/2013/07/29/pcbs-with-powder-coat/  http://hackaday.com/2011/05/22/bamf2011-lasersaur-is-one-big-laser-cutter/  http://hackaday.com/2009/10/25/diy-plotter-with-laser/   http://hackaday.com/2008/08/03/laser-etching-printed-circuit-boards/    http://hackaday.com/2013/04/03/homebuilt-laser-cutter-ideas/   http://hackaday.com/2012/09/10/put-a-solder-mask-on-those-homebrew-pcbs/  http://hackaday.com/2013/02/07/pcb-production-workshop-means-everyone-gets-an-arduino/  http://hackaday.com/2012/08/30/etching-your-own-pcbs-at-home/  http://hackaday.com/2009/10/13/how-to-populate-a-surface-mount-pcb/  http://hackaday.com/2009/04/21/making-cool-looking-pcbs/  http://hackaday.com/2008/07/28/how-to-etch-a-single-sided-pcb/  http://hackaday.com/2008/03/30/pcb-milling-hell-sunday-extra/  http://hackaday.com/2012/04/30/etching-your-own-boards-really-really-fast/", 
+            "title": "Links"
+        }
+    ]
+}
