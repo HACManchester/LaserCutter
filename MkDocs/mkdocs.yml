@@ -1,0 +1,24 @@
+site_name: Manchester HacSpace - Laser Cutter
+pages:
+- Home: index.md
+- PCB: 
+    - Overview: PCB/Overview.md
+    - Prepping the Board: PCB/CopperBoard-Prep.md
+    - Design KiCad: PCB/Design-KiCad.md
+    - Laser Engraving: PCB/Laser-Etching.md
+    - Cleaning the Board: PCB/Cleaning-Board.md
+    - Etching Tank: PCB/Etching-Tank.md
+    - Further Ideas: PCB/Further-Ideas.md
+    - Links: PCB/Links.md
+
+theme: slate
+#theme: alabaster
+#theme: readthedocs
+#theme: mkdocs
+
+markdown_extensions:
+    - smarty
+
+extra_css:
+    - css/highlight-fix.css
+    - css/highlight-custom.css
