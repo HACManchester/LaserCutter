@@ -4,12 +4,12 @@ It's possible to create a solder paste mask using the laser cutter and A4 Mylar 
 
 ## Export the Solder Paste Layer
 
-First export the paste layers from KiCad
+Within Kicad
 
-  * Make sure **Use auxiliary axis as origin is ticked**
-  * Tick the Front and Back paste layers
-
-<a href="../../images/PCB/KiCad/KiCad-Paste1.png"><img src="../../images/PCB/KiCad/KiCad-Paste1.png" height="50%" width="50%" ></a> <br>
+  * Export the layers F.Paste and B.Paste as Gerbers
+  * **Auxiliary axis as origin:** Ticked
+  * **Exclude PCB edge layer from other layers:** unticked
+  * Plot these layers out as gerber files
 
 ## Import to FlatCAM
 

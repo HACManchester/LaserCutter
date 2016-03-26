@@ -9,7 +9,7 @@ However it's also usefull for exporting SVG's from Gerbers and doing isolation r
 
 ## Isolation Routing
 
-Isolation routing is where you surround each track on the PCB with a line, so instead of removing all the Copper on the board
+Isolation routing is where you surround each track on the PCB with a line. So instead of removing all the Copper on the board,
 this just removes the minimum needed to seperate one track from another.
 
   * In the case of a Laser Cutter the less paint removed from the board the better, the more paint you remove the more likley it will be
@@ -28,7 +28,7 @@ The first step is to import the Gerber into FlatCAM, and a drill file if you've 
   * File -> Open -> Select Gerber File
   * File -> Open -> Select Drill File
 
-<a href="../../images/PCB/FlatCAM/FlatCAM-1.png"><img src="../../images/PCB/FlatCAM/FlatCAM-1.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/FlatCAM/FlatCAM-Single1.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Single1.png" height="50%" width="50%" ></a> <br>
 
 (I should probably point out that the image pictured has tracks too small to be used with the laser, but this is only for demonstration purposes)
 
@@ -42,7 +42,7 @@ The next step is to generate a Geometry for the imported Gerber, this is actuall
   * Click **Generate Geometry**
   * TODO I think the minimum will be 0.1mm further experimentation is needed
 
-<a href="../../images/PCB/FlatCAM/FlatCAM-2.png"><img src="../../images/PCB/FlatCAM/FlatCAM-2.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/FlatCAM/FlatCAM-Single2.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Single2.png" height="50%" width="50%" ></a> <br>
 
 This should result in a red line surrounding everything
 
@@ -52,13 +52,13 @@ Next we need to generate a CNCJob, in this case we're not going to use G-Code, b
 
   * Switch to the Project Tab and select the generated Geometry
 
-<a href="../../images/PCB/FlatCAM/FlatCAM-3.png"><img src="../../images/PCB/FlatCAM/FlatCAM-3.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/FlatCAM/FlatCAM-Single3.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Single3.png" height="50%" width="50%" ></a> <br>
 
   * Next Switch back to the Selected Tab
   * Click Generate to generate a CNC Job
   * This should result in a blue line around the tracks, this is what we're interested in for the laser cutter
 
-<a href="../../images/PCB/FlatCAM/FlatCAM-4.png"><img src="../../images/PCB/FlatCAM/FlatCAM-4.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/FlatCAM/FlatCAM-Single4.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Single4.png" height="50%" width="50%" ></a> <br>
 
 ## Export the CNCJob
 
@@ -68,7 +68,7 @@ The final step is just to export the CNCJob as an SVG
   * Select the new CNCJob
   * Select File -> Export SVG from the menu
 
-<a href="../../images/PCB/FlatCAM/FlatCAM-5.png"><img src="../../images/PCB/FlatCAM/FlatCAM-5.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/FlatCAM/FlatCAM-Single5.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Single5.png" height="50%" width="50%" ></a> <br>
 
 There's quite a lot of different settings you can play with for exporting just the solder pads for example. <br>
 If you want the drill holes to be etched as well, then also Export the imported drill file as an SVG, at which point we can then import it later on into Visicut.

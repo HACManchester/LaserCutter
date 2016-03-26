@@ -1,4 +1,4 @@
-# Laser Etching
+# Laser Engraving
 
 ## Important
 
@@ -31,7 +31,7 @@ At this point we can now import each svg from KiCad into Visicut
 
 Importing the Drill svg should allow etching within the drill holes to make locating the holes easier when actually drilling the final board.
 
-<a href="../../images/PCB/Visicut/Visicut-1.png"><img src="../../images/PCB/Visicut/Visicut-1.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/Visicut/Visicut-Track1.png"><img src="../../images/PCB/Visicut/Visicut-Track1.png" height="50%" width="50%" ></a> <br>
 
 ### Mapping the Colour
 
@@ -40,7 +40,7 @@ Importing the Drill svg should allow etching within the drill holes to make loca
   * Tick the **Blue** colour under the pcb svg
   * Select **Engrave Solid**
 
-<a href="../../images/PCB/Visicut/Visicut-2.png"><img src="../../images/PCB/Visicut/Visicut-2.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/Visicut/Visicut-Track2.png"><img src="../../images/PCB/Visicut/Visicut-Track2.png" height="50%" width="50%" ></a> <br>
 
 ### Laser Settings
 
@@ -48,13 +48,26 @@ Importing the Drill svg should allow etching within the drill holes to make loca
   * Make sure speed is set to 100
   * **TODO** check which power option is the best, starting from the lowest moving upwards
 
-<a href="../../images/PCB/Visicut/Visicut-3.png"><img src="../../images/PCB/Visicut/Visicut-3.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/Visicut/Visicut-Track3.png"><img src="../../images/PCB/Visicut/Visicut-Track3.png" height="50%" width="50%" ></a> <br>
 
 ### Drill Points
 
 If you want to etch away the holes for the drill points then rinse and repeat for the drill svg
 
-<a href="../../images/PCB/Visicut/Visicut-4.png"><img src="../../images/PCB/Visicut/Visicut-4.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/Visicut/Visicut-Track4.png"><img src="../../images/PCB/Visicut/Visicut-Track4.png" height="50%" width="50%" ></a> <br>
+
+### Testing on MDF
+
+For testing on a sheet of paper or mdf I've found the following seems to work for some settings
+
+  * engrave solid (this rasters the board)
+  * power 0.5
+  * speed 100
+
+### DPI
+
+The default DPI Setting is 500 which is the best one to use for most accuracy. <br>
+For greater speed with engraving it's possible to use a lower DPI setting, but accuracy will suffer as a result.
 
 ## TODO
 

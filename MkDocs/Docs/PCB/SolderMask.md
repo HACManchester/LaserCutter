@@ -23,11 +23,14 @@ So far I've seen people use vitrea glass paint, although Fred Aldous has some av
 
 TODO Check board alignment
 
-## KiCad Export Gerber
+## Export the Solder Mask Layers
 
-TODO need both pad regions and solder paste regions
-Also export with border
+Within Kicad
 
+  * Export the layers F.Mask and B.Mask as Gerbers
+  * **Auxiliary axis as origin:** Ticked
+  * **Exclude PCB edge layer from other layers:** unticked
+  * Plot these layers out as gerber files
 
 ## FlatCam - Create Non Pad Region
 
@@ -35,20 +38,21 @@ Also export with border
   * Then select it, and switch across to the Selected Tab
   * Under **Non Copper regions**, click **Generate Geometry**
   * Finally export this geometry as an SVG
+  * This should give us a Negative to work with
 
-TODO image
+<a href="../../images/PCB/FlatCAM/FlatCAM-Mask1.png"><img src="../../images/PCB/FlatCAM/FlatCAM-Mask1.png" height="50%" width="50%" ></a> <br>
 
 ## Editing within Inkscape
 
 Next we need to do a small amount of editing within inkscape
 
   * Import the SVG exported from FlatCAM
-  * Ungroup the contents as much as possible
+  * Right click ungroup the contents as much as possible
   * Select the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255
   * Make sure the Opacity is also set to 100
   * Change the colour to something solid like bright red
 
-TODO Image
+<a href="../../images/PCB/Inkscape/Inkscape-Mask1.png"><img src="../../images/PCB/Inkscape/Inkscape-Mask1.png" height="50%" width="50%" ></a> <br>
 
 ## Import into Visicut
 
@@ -58,7 +62,7 @@ Next import the SVG into Visicut
   * Select Engrave Solid for the bright red colour mentioned above
   * This should highlight all the non solder pad areas as areas to be engraved.
 
-TODO Image
+<a href="../../images/PCB/Visicut/Visicut-Mask1.png"><img src="../../images/PCB/Visicut/Visicut-Mask1.png" height="50%" width="50%" ></a> <br>
 
 ## Spray the board
 

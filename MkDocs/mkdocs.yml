@@ -1,12 +1,19 @@
 site_name: Manchester HacSpace - Laser Cutter
 pages:
 - Home: index.md
+- LaserCutter:
+    - Overview: LaserCutter/Overview.md
+    - Software: LaserCutter/Software.md
+    - Design: LaserCutter/Design.md
+    - Cutting: LaserCutter/Cutting.md
+    - Materials: LaserCutter/Materials.md
+
 - PCB:
     - Overview: PCB/Overview.md
     - Kicad - Exporting Gerbers: PCB/Kicad-GerberExport.md
     - FlatCAM - Single Sided Boards: PCB/FlatCAM-SingleSided.md
     - Prepping the Board: PCB/CopperBoard-Prep.md
-    - Laser Engraving: PCB/Laser-Etching.md
+    - Laser Engraving: PCB/Laser-Engraving.md
     - Cleaning the Board: PCB/Cleaning-Board.md
     - Etching Tank: PCB/Etching-Tank.md
     - Solder Paste Mylar: PCB/SolderPaste-Stencil.md
