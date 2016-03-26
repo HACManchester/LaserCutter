@@ -54,7 +54,13 @@
     </url>
         
     <url>
-     <loc>None/PCB/SolderPaste-Layer/</loc>
+     <loc>None/PCB/SolderPaste-Stencil/</loc>
+     <lastmod>2016-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/PCB/SolderMask/</loc>
      <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>

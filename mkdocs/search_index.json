@@ -216,29 +216,74 @@
             "title": "Drilling the Board"
         }, 
         {
-            "location": "/PCB/SolderPaste-Layer/", 
-            "text": "Solder Paste Layer\n\n\nIt\ns possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets\n\n\nExport the Solder Paste Layer\n\n\nFirst export the paste layers from KiCad\n\n\n\n\nMake sure \nUse auxiliary axis as origin is ticked\n\n\nTick the Front and Back paste layers\n\n\n\n\n \n\n\nImport to FlatCAM\n\n\nNext import to flatcam, then re-export as an SVG\n\n\n \n\n\nImport to Visicut\n\n\nFinaly drag and drop the svg into Visicut and use Map by colour\n\n\nTODO see if Engrave Solid is the best option even though we\nre cutting through for accuracy\nalso what power to use?", 
+            "location": "/PCB/SolderPaste-Stencil/", 
+            "text": "Solder Paste Stencil\n\n\nIt\ns possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets\n\n\nExport the Solder Paste Layer\n\n\nFirst export the paste layers from KiCad\n\n\n\n\nMake sure \nUse auxiliary axis as origin is ticked\n\n\nTick the Front and Back paste layers\n\n\n\n\n \n\n\nImport to FlatCAM\n\n\nNext import to flatcam, then re-export as an SVG\n\n\n \n\n\nImport to Visicut\n\n\nFinaly drag and drop the svg into Visicut and use Map by colour\n\n\nTODO see if Engrave Solid is the best option even though we\nre cutting through for accuracy\nalso what power to use?", 
             "title": "Solder Paste Mylar"
         }, 
         {
-            "location": "/PCB/SolderPaste-Layer/#solder-paste-layer", 
+            "location": "/PCB/SolderPaste-Stencil/#solder-paste-stencil", 
             "text": "It s possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets", 
-            "title": "Solder Paste Layer"
+            "title": "Solder Paste Stencil"
         }, 
         {
-            "location": "/PCB/SolderPaste-Layer/#export-the-solder-paste-layer", 
+            "location": "/PCB/SolderPaste-Stencil/#export-the-solder-paste-layer", 
             "text": "First export the paste layers from KiCad   Make sure  Use auxiliary axis as origin is ticked  Tick the Front and Back paste layers", 
             "title": "Export the Solder Paste Layer"
         }, 
         {
-            "location": "/PCB/SolderPaste-Layer/#import-to-flatcam", 
+            "location": "/PCB/SolderPaste-Stencil/#import-to-flatcam", 
             "text": "Next import to flatcam, then re-export as an SVG", 
             "title": "Import to FlatCAM"
         }, 
         {
-            "location": "/PCB/SolderPaste-Layer/#import-to-visicut", 
+            "location": "/PCB/SolderPaste-Stencil/#import-to-visicut", 
             "text": "Finaly drag and drop the svg into Visicut and use Map by colour  TODO see if Engrave Solid is the best option even though we re cutting through for accuracy\nalso what power to use?", 
             "title": "Import to Visicut"
+        }, 
+        {
+            "location": "/PCB/SolderMask/", 
+            "text": "Solder Masks\n\n\nSolder masks are good for two reasons\n\n\n\n\nThey help solder paste to stick to just they\nre own pads during reflow\n\n\nThey can make the board look pretty\n\n\n\n\nOverview\n\n\nNormally solder masks are only available on prefabbed boards, and even then the colour is usually just a single colour.\nOne of the techniques used online to create homebrew solder masks is the use of glass paint.\nThe reason for using glass paint is that once it\ns cured it\ns very heat resistant (such as during soldering).\nAlso spraying instead of brushing the board leads to better results from what I\nve heard online\n\n\nThe idea is (and this is untested) in order to make sure the glass paint doesn\nt stick to the solder pads\nwe can remove the black paint from the board everywhere except for the solder pads using a negative image / engrave solid.\nThis way after the glass paint has been sprayed on and dried, we can remove it from the solder pad areas using some ipa.\n\n\nThis is still untested as of yet, but FlatCAM does allow us to create the negative image SVG we need quite easily.\nAlso this could allow for some really fancy colourful PCB\ns that you wouldn\nt normally be able to get with prefabbed boards.\n\n\nSo far I\nve seen people use vitrea glass paint, although Fred Aldous has some available we can try and experiment with as well.\n\n\nTODO Check board alignment\n\n\nKiCad Export Gerber\n\n\nTODO need both pad regions and solder paste regions\nAlso export with border\n\n\nFlatCam - Create Non Pad Region\n\n\n\n\nNext import your gerber into FlatCAM, this gerber should represent all the solder pads to be left exposed\n\n\nThen select it, and switch across to the Selected Tab\n\n\nUnder \nNon Copper regions\n, click \nGenerate Geometry\n\n\nFinally export this geometry as an SVG\n\n\n\n\nTODO image\n\n\nEditing within Inkscape\n\n\nNext we need to do a small amount of editing within inkscape\n\n\n\n\nImport the SVG exported from FlatCAM\n\n\nUngroup the contents as much as possible\n\n\nSelect the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255\n\n\nMake sure the Opacity is also set to 100\n\n\nChange the colour to something solid like bright red\n\n\n\n\nTODO Image\n\n\nImport into Visicut\n\n\nNext import the SVG into Visicut\n\n\n\n\nSelect Map by Colour\n\n\nSelect Engrave Solid for the bright red colour mentioned above\n\n\nThis should highlight all the non solder pad areas as areas to be engraved.\n\n\n\n\nTODO Image\n\n\nSpray the board\n\n\nTODO\n\n\nClean the board\n\n\nTODO", 
+            "title": "Solder Mask"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#solder-masks", 
+            "text": "Solder masks are good for two reasons   They help solder paste to stick to just they re own pads during reflow  They can make the board look pretty", 
+            "title": "Solder Masks"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#overview", 
+            "text": "Normally solder masks are only available on prefabbed boards, and even then the colour is usually just a single colour.\nOne of the techniques used online to create homebrew solder masks is the use of glass paint.\nThe reason for using glass paint is that once it s cured it s very heat resistant (such as during soldering).\nAlso spraying instead of brushing the board leads to better results from what I ve heard online  The idea is (and this is untested) in order to make sure the glass paint doesn t stick to the solder pads\nwe can remove the black paint from the board everywhere except for the solder pads using a negative image / engrave solid.\nThis way after the glass paint has been sprayed on and dried, we can remove it from the solder pad areas using some ipa.  This is still untested as of yet, but FlatCAM does allow us to create the negative image SVG we need quite easily.\nAlso this could allow for some really fancy colourful PCB s that you wouldn t normally be able to get with prefabbed boards.  So far I ve seen people use vitrea glass paint, although Fred Aldous has some available we can try and experiment with as well.  TODO Check board alignment", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#kicad-export-gerber", 
+            "text": "TODO need both pad regions and solder paste regions\nAlso export with border", 
+            "title": "KiCad Export Gerber"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#flatcam-create-non-pad-region", 
+            "text": "Next import your gerber into FlatCAM, this gerber should represent all the solder pads to be left exposed  Then select it, and switch across to the Selected Tab  Under  Non Copper regions , click  Generate Geometry  Finally export this geometry as an SVG   TODO image", 
+            "title": "FlatCam - Create Non Pad Region"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#editing-within-inkscape", 
+            "text": "Next we need to do a small amount of editing within inkscape   Import the SVG exported from FlatCAM  Ungroup the contents as much as possible  Select the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255  Make sure the Opacity is also set to 100  Change the colour to something solid like bright red   TODO Image", 
+            "title": "Editing within Inkscape"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#import-into-visicut", 
+            "text": "Next import the SVG into Visicut   Select Map by Colour  Select Engrave Solid for the bright red colour mentioned above  This should highlight all the non solder pad areas as areas to be engraved.   TODO Image", 
+            "title": "Import into Visicut"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#spray-the-board", 
+            "text": "TODO", 
+            "title": "Spray the board"
+        }, 
+        {
+            "location": "/PCB/SolderMask/#clean-the-board", 
+            "text": "TODO", 
+            "title": "Clean the board"
         }, 
         {
             "location": "/PCB/Further-Ideas/", 

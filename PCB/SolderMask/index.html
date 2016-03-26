@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Prepping the Board - Manchester HacSpace - Laser Cutter</title>
+	<title>Solder Mask - Manchester HacSpace - Laser Cutter</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -81,8 +81,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Prepping the Board</a>
+<li >
+    <a href="../CopperBoard-Prep/">Prepping the Board</a>
 </li>
 
                     
@@ -111,8 +111,8 @@
 
                     
                         
-<li >
-    <a href="../SolderMask/">Solder Mask</a>
+<li class="active">
+    <a href="./">Solder Mask</a>
 </li>
 
                     
@@ -148,12 +148,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../FlatCAM-SingleSided/">
+                    <a rel="next" href="../SolderPaste-Stencil/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../Laser-Etching/">
+                    <a rel="prev" href="../Further-Ideas/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -167,44 +167,78 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#prepping-the-copper-board">Prepping the Copper Board</a></li>
+        <li class="main active"><a href="#solder-masks">Solder Masks</a></li>
         
-            <li><a href="#unwrap-the-board">Unwrap the Board</a></li>
+            <li><a href="#overview">Overview</a></li>
         
-            <li><a href="#spray-the-board">Spray the Board</a></li>
+            <li><a href="#kicad-export-gerber">KiCad Export Gerber</a></li>
+        
+            <li><a href="#flatcam-create-non-pad-region">FlatCam - Create Non Pad Region</a></li>
+        
+            <li><a href="#editing-within-inkscape">Editing within Inkscape</a></li>
+        
+            <li><a href="#import-into-visicut">Import into Visicut</a></li>
+        
+            <li><a href="#spray-the-board">Spray the board</a></li>
+        
+            <li><a href="#clean-the-board">Clean the board</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="prepping-the-copper-board">Prepping the Copper Board</h1>
-<h2 id="unwrap-the-board">Unwrap the Board</h2>
+<h1 id="solder-masks">Solder Masks</h1>
+<p>Solder masks are good for two reasons</p>
 <ul>
-<li>First pull off the plastic from the copper board</li>
-<li>Next prep the board by roughing it up, perhaps by dipping it into etchant, or using a roughing stone</li>
-<li>Next clean the board with acetone</li>
+<li>They help solder paste to stick to just they&rsquo;re own pads during reflow</li>
+<li>They can make the board look pretty</li>
 </ul>
-<p>One suggestion is to use auto primer to make the paint stick the board better</p>
-<h2 id="spray-the-board">Spray the Board</h2>
-<p>Next we need to spray the board. <br>
-The general view is that the more coats of paint the better, and that there should be at least 2 coats
-so that when removing the invisible layer left by the laser the smaller traces can remain on the board during cleaning</p>
-<h3 id="paint-types">Paint Types</h3>
-<p>There&rsquo;s a few different suggestions on the types of paint.
-The main two mentioned in the links are</p>
+<h2 id="overview">Overview</h2>
+<p>Normally solder masks are only available on prefabbed boards, and even then the colour is usually just a single colour.
+One of the techniques used online to create homebrew solder masks is the use of glass paint.
+The reason for using glass paint is that once it&rsquo;s cured it&rsquo;s very heat resistant (such as during soldering).
+Also spraying instead of brushing the board leads to better results from what I&rsquo;ve heard online</p>
+<p>The idea is (and this is untested) in order to make sure the glass paint doesn&rsquo;t stick to the solder pads
+we can remove the black paint from the board everywhere except for the solder pads using a negative image / engrave solid.
+This way after the glass paint has been sprayed on and dried, we can remove it from the solder pad areas using some ipa.</p>
+<p>This is still untested as of yet, but FlatCAM does allow us to create the negative image SVG we need quite easily.
+Also this could allow for some really fancy colourful PCB&rsquo;s that you wouldn&rsquo;t normally be able to get with prefabbed boards.</p>
+<p>So far I&rsquo;ve seen people use vitrea glass paint, although Fred Aldous has some available we can try and experiment with as well.</p>
+<p>TODO Check board alignment</p>
+<h2 id="kicad-export-gerber">KiCad Export Gerber</h2>
+<p>TODO need both pad regions and solder paste regions
+Also export with border</p>
+<h2 id="flatcam-create-non-pad-region">FlatCam - Create Non Pad Region</h2>
 <ul>
-<li>Black Auto primer (car paint I think)</li>
-<li>Rustoleum Painters Touch 2xCoverage paint</li>
+<li>Next import your gerber into FlatCAM, this gerber should represent all the solder pads to be left exposed</li>
+<li>Then select it, and switch across to the Selected Tab</li>
+<li>Under <strong>Non Copper regions</strong>, click <strong>Generate Geometry</strong></li>
+<li>Finally export this geometry as an SVG</li>
 </ul>
-<p>There&rsquo;s also</p>
+<p>TODO image</p>
+<h2 id="editing-within-inkscape">Editing within Inkscape</h2>
+<p>Next we need to do a small amount of editing within inkscape</p>
 <ul>
-<li><a href="http://hackaday.com/2010/08/17/negative-laser-etching/">http://hackaday.com/2010/08/17/negative-laser-etching/</a></li>
-<li>Black acrylic spray paint (Krylon brand) - suggested on instructables</li>
-<li>Plastifier mask (acrylic varnish / plastifiant)</li>
+<li>Import the SVG exported from FlatCAM</li>
+<li>Ungroup the contents as much as possible</li>
+<li>Select the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255</li>
+<li>Make sure the Opacity is also set to 100</li>
+<li>Change the colour to something solid like bright red</li>
 </ul>
-<p>I&rsquo;ve also got some black acrylic paint from WHS Smiths to try out (Humbrol).
-For black acrylic paint, the suggestion is to use 3 - 5 coats allowing time for each coat to dry.</p></div>
+<p>TODO Image</p>
+<h2 id="import-into-visicut">Import into Visicut</h2>
+<p>Next import the SVG into Visicut</p>
+<ul>
+<li>Select Map by Colour</li>
+<li>Select Engrave Solid for the bright red colour mentioned above</li>
+<li>This should highlight all the non solder pad areas as areas to be engraved.</li>
+</ul>
+<p>TODO Image</p>
+<h2 id="spray-the-board">Spray the board</h2>
+<p>TODO</p>
+<h2 id="clean-the-board">Clean the board</h2>
+<p>TODO</p></div>
         </div>
 
         <footer class="col-md-12">
