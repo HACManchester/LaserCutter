@@ -1,15 +1,18 @@
 site_name: Manchester HacSpace - Laser Cutter
 pages:
 - Home: index.md
-- PCB: 
+- PCB:
     - Overview: PCB/Overview.md
+    - Kicad - Exporting Gerbers: PCB/Kicad-GerberExport.md
+    - FlatCAM - Single Sided Boards: PCB/FlatCAM-SingleSided.md
     - Prepping the Board: PCB/CopperBoard-Prep.md
-    - Design KiCad: PCB/Design-KiCad.md
     - Laser Engraving: PCB/Laser-Etching.md
     - Cleaning the Board: PCB/Cleaning-Board.md
     - Etching Tank: PCB/Etching-Tank.md
+    - Solder Paste Mylar: PCB/SolderPaste-Layer.md
     - Further Ideas: PCB/Further-Ideas.md
     - Links: PCB/Links.md
+    - Kicad - Exporting as SVG: PCB/KiCad-Svg.md
 
 theme: slate
 #theme: alabaster

@@ -17,3 +17,4 @@ TODO Check with Ruth on this
 
   * Metholated Spirits for removing the thin layer left behind by brush on paint
   * Mineral Turpentine for removing the thin layer left behind by spray on paint
+  * Use a dish sponge to scrub the board

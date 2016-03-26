@@ -1,42 +1,63 @@
 # Laser Etching
 
-| Important |
-| ----- |
-| The information here should be for now considered experimental / theoretical / untested. |
-| It's important to make sure we don't get reflections back into the laser cutter optics from the copper |
-| Try to use a highest speed / lowest power as possible to avoid reflections |
-| It's probably best to check with the Master Laser Guardian first (Bob) before actually trying anything. |
+## Important
+
+  * **The information here should be for now considered experimental / untested.**
+  * **It's probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.**
+  * **Try to use a highest speed / lowest power as possible to avoid reflections that might impact the optices from the copper**
+
+## Overview
+
+It's not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.
+To burn away copper with the laser would probably require oxygen assist, or a fibre laser.
+But we can burn away paint from the board then use chemicals to etch away the exposed copper
+
+Some things to be aware of:
+
+  * We need to try avoiding going over the board multiple times, this can lead to unpredictable results
+  * The air assist should blow onto the part while it's being cut, according to Bob the vacuum is located at the bottom so cutting top to bottom should be okay
+    with the orange laser cutter
 
 ## Import into Visicut
+
+### Initial Import
 
 At this point we can now import each svg from KiCad into Visicut
 
   * Open up Visicut
   * Drag and Drop the svg into Visicut
-  * Select the Position tab at the bottom right
-  * Enter Values in for X and Y, these need to be consistant when marking both layers
+  * Select the Position Tab
+  * If your including multiple layers such as the drill points and the pcb, use the center position option to get everything aligned okay
 
-<a href="../../images/PCB/Visicut-1.png"><img src="../../images/PCB/Visicut-1.png" height="50%" width="50%" ></a> <br>
+Importing the Drill svg should allow etching within the drill holes to make locating the holes easier when actually drilling the final board.
+
+<a href="../../images/PCB/Visicut/Visicut-1.png"><img src="../../images/PCB/Visicut/Visicut-1.png" height="50%" width="50%" ></a> <br>
+
+### Mapping the Colour
 
   * Select **Map by Single Property**
-  * Select **Map by Type**
-  * Tick next to **Shape** and select **Engrave Solid**
+  * Select **Map by Color**
+  * Tick the **Blue** colour under the pcb svg
+  * Select **Engrave Solid**
 
-<a href="../../images/PCB/Visicut-2.png"><img src="../../images/PCB/Visicut-2.png" height="50%" width="50%" ></a> <br>
+<a href="../../images/PCB/Visicut/Visicut-2.png"><img src="../../images/PCB/Visicut/Visicut-2.png" height="50%" width="50%" ></a> <br>
 
-## Notes
+### Laser Settings
 
-It's not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.
-But we can use the Etch method by burning away paint from the PCB.
-To burn away copper with the laser would probably require oxygen assist, or a fibre laser.
+  * Under Laser Settings
+  * Make sure speed is set to 100
+  * **TODO** check which power option is the best, starting from the lowest moving upwards
 
-  * We need to try avoiding going over the board multiple times, this can lead to unpredictable results
-  * Power should be low as possible, Speed as high as possible, we need to avoid reflections into the optics
-  * The air assist should blow onto the part while it's being cut, according to Bob the vacume is located at the bottom so cutting top to bottom should be okay <br>
-  * One thing to watch out for is if the evaporated paint from the engrave blows over an area already engraved and settles this can interfere with the engraving
+<a href="../../images/PCB/Visicut/Visicut-3.png"><img src="../../images/PCB/Visicut/Visicut-3.png" height="50%" width="50%" ></a> <br>
+
+### Drill Points
+
+If you want to etch away the holes for the drill points then rinse and repeat for the drill svg
+
+<a href="../../images/PCB/Visicut/Visicut-4.png"><img src="../../images/PCB/Visicut/Visicut-4.png" height="50%" width="50%" ></a> <br>
 
 ## TODO
 
   * Try a Z Height from the top of the board to the laser, instead of using the bed as the zero point
-  * Try different speeds / powers, starting with the lowest power / highest speed first
-  * some users have managed it with a 1W / 2W Laser LED, try 5% first perhaps
+  * Try different powers, starting with the lowest power first
+  * Look into using a Jig for Alignment
