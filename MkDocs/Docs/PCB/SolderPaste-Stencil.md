@@ -1,4 +1,4 @@
-# Solder Paste Layer
+# Solder Paste Stencil
 
 It's possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets
 
