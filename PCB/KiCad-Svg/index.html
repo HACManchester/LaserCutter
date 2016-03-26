@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Laser Engraving - Manchester HacSpace - Laser Cutter</title>
+	<title>Kicad - Exporting as SVG - Manchester HacSpace - Laser Cutter</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -87,8 +87,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Laser Engraving</a>
+<li >
+    <a href="../Laser-Etching/">Laser Engraving</a>
 </li>
 
                     
@@ -123,8 +123,8 @@
 
                     
                         
-<li >
-    <a href="../KiCad-Svg/">Kicad - Exporting as SVG</a>
+<li class="active">
+    <a href="./">Kicad - Exporting as SVG</a>
 </li>
 
                     
@@ -142,12 +142,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../CopperBoard-Prep/">
+                    <a rel="next" href="../Links/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../Cleaning-Board/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -161,13 +161,13 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#laser-etching">Laser Etching</a></li>
+        <li class="main active"><a href="#kicad-design">Kicad - Design</a></li>
         
-            <li><a href="#important">Important</a></li>
+            <li><a href="#pcb-design">PCB Design</a></li>
         
-            <li><a href="#overview">Overview</a></li>
+            <li><a href="#inkscape-edit">Inkscape Edit</a></li>
         
-            <li><a href="#import-into-visicut">Import into Visicut</a></li>
+            <li><a href="#examples">Examples</a></li>
         
             <li><a href="#todo">TODO</a></li>
         
@@ -176,57 +176,81 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="laser-etching">Laser Etching</h1>
-<h2 id="important">Important</h2>
+<h1 id="kicad-design">Kicad - Design</h1>
+<p><strong>Note this is an older doc I&rsquo;ve kept for info, it&rsquo;s better to use the Gerber method instead because it&rsquo;s easier</strong></p>
+<p>The below lists the steps needed to export a KiCad PCB for use with the laser cutter.</p>
+<h2 id="pcb-design">PCB Design</h2>
+<p>The first step is to open the PCB Design within KiCad</p>
+<p><a href="../../images/PCB/KiCad/KiCad-1.png"><img src="../../images/PCB/KiCad/KiCad-Svg1.png" height="50%" width="50%" ></a> <br></p>
+<h3 id="export-top-layer">Export Top Layer</h3>
+<p>Next we&rsquo;re going to export the top layer as an SVG image</p>
+<table>
+<thead>
+<tr>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It&rsquo;s best to avoid the use of the File -&gt; Export Svg option since that doesn&rsquo;t allow for a negative to be created, instead we&rsquo;re going to use Plot</td>
+</tr>
+<tr>
+<td>It&rsquo;s also best to draw a square around the board on the &ldquo;Edge Cuts&rdquo; Layer, make sure it doesn&rsquo;t come into contact with any of the pins</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>The information here should be for now considered experimental / untested.</strong></li>
-<li><strong>It&rsquo;s probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.</strong></li>
-<li><strong>Try to use a highest speed / lowest power as possible to avoid reflections that might impact the optices from the copper</strong></li>
+<li>Select <strong>File -&gt; Plot</strong></li>
+<li>Select the Front Copper Layer on the left</li>
+<li>Select the Output directory &ldquo;svg/&rdquo;</li>
+<li>Select Drill marks: <strong>Small</strong></li>
+<li>Negative plot: <strong>Ticked</strong></li>
+<li>Mirrored Plot: <strong>Unticked</strong> for the front layer</li>
+<li>Exclude PCB edge layer from other layers: <strong>Unticked</strong> To include the Outer cut line</li>
 </ul>
-<h2 id="overview">Overview</h2>
-<p>It&rsquo;s not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.
-To burn away copper with the laser would probably require oxygen assist, or a fibre laser.
-But we can burn away paint from the board then use chemicals to etch away the exposed copper</p>
-<p>Some things to be aware of:</p>
+<p><a href="../../images/PCB/KiCad/KiCad-2.png"><img src="../../images/PCB/KiCad/KiCad-Svg2.png" height="50%" width="50%" ></a> <br></p>
+<p>Click <strong>Plot</strong> to export the svg</p>
+<h3 id="export-bottom-layer">Export Bottom Layer</h3>
+<p>Next for the bottom layer repeat as above but make the following changes</p>
 <ul>
-<li>We need to try avoiding going over the board multiple times, this can lead to unpredictable results</li>
-<li>The air assist should blow onto the part while it&rsquo;s being cut, according to Bob the vacuum is located at the bottom so cutting top to bottom should be okay
-    with the orange laser cutter</li>
+<li>Select the Bottom Copper Layer on the left, unselect the Front Layer</li>
+<li>Mirrored Plot: <strong>Ticked</strong> for the bottom layer</li>
 </ul>
-<h2 id="import-into-visicut">Import into Visicut</h2>
-<h3 id="initial-import">Initial Import</h3>
-<p>At this point we can now import each svg from KiCad into Visicut</p>
+<p><a href="../../images/PCB/KiCad/KiCad-3.png"><img src="../../images/PCB/KiCad/KiCad-Svg3.png" height="50%" width="50%" ></a> <br></p>
+<p>Click <strong>Plot</strong> to export the svg</p>
+<h2 id="inkscape-edit">Inkscape Edit</h2>
+<p>Next we need to resize a couple of things within inkscape.</p>
+<p>First we want to resize the actual Document</p>
 <ul>
-<li>Open up Visicut</li>
-<li>Drag and Drop the svg into Visicut</li>
-<li>Select the Position Tab</li>
-<li>If your including multiple layers such as the drill points and the pcb, use the center position option to get everything aligned okay</li>
+<li>Open each svg within inkscape</li>
+<li>Open up File -&gt; Document Properties</li>
+<li>Select the white box surrounding the Board</li>
+<li>Expand the <strong>Resize page to content&hellip;</strong></li>
+<li>Click <strong>Resize page to drawing or selection</strong> with the white outer box selected</li>
 </ul>
-<p>Importing the Drill svg should allow etching within the drill holes to make locating the holes easier when actually drilling the final board.</p>
-<p><a href="../../images/PCB/Visicut/Visicut-1.png"><img src="../../images/PCB/Visicut/Visicut-1.png" height="50%" width="50%" ></a> <br></p>
-<h3 id="mapping-the-colour">Mapping the Colour</h3>
+<p><a href="../../images/PCB/KiCad/KiCad-4.png"><img src="../../images/PCB/KiCad/KiCad-Svg4.png" height="50%" width="50%" ></a> <br></p>
+<p>Next we need to resize the big black box that surrounds the box so that it fits within the document, this is acting as a mask</p>
 <ul>
-<li>Select <strong>Map by Single Property</strong></li>
-<li>Select <strong>Map by Color</strong></li>
-<li>Tick the <strong>Blue</strong> colour under the pcb svg</li>
-<li>Select <strong>Engrave Solid</strong></li>
+<li>Select the white outline box, and select <strong>Edit -&gt; Copy</strong></li>
+<li>Select the Outer black box and Select <strong>Edit -&gt; Paste Size -&gt; Paste Size</strong></li>
+<li>At the top Enter X: 0 Y: 0 to position the box at the bottom left corner</li>
 </ul>
-<p><a href="../../images/PCB/Visicut/Visicut-2.png"><img src="../../images/PCB/Visicut/Visicut-2.png" height="50%" width="50%" ></a> <br></p>
-<h3 id="laser-settings">Laser Settings</h3>
+<p><a href="../../images/PCB/KiCad/KiCad-5.png"><img src="../../images/PCB/KiCad/KiCad-Svg5.png" height="50%" width="50%" ></a> <br></p>
+<h2 id="examples">Examples</h2>
+<p>Some svg&rsquo;s of adafruit&rsquo;s pcb ruler for testing how small can we go</p>
 <ul>
-<li>Under Laser Settings</li>
-<li>Make sure speed is set to 100</li>
-<li><strong>TODO</strong> check which power option is the best, starting from the lowest moving upwards</li>
+<li><a href="https://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg">https://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg</a></li>
 </ul>
-<p><a href="../../images/PCB/Visicut/Visicut-3.png"><img src="../../images/PCB/Visicut/Visicut-3.png" height="50%" width="50%" ></a> <br></p>
-<h3 id="drill-points">Drill Points</h3>
-<p>If you want to etch away the holes for the drill points then rinse and repeat for the drill svg</p>
-<p><a href="../../images/PCB/Visicut/Visicut-4.png"><img src="../../images/PCB/Visicut/Visicut-4.png" height="50%" width="50%" ></a> <br></p>
+<p>A test of the pcb I replicated from the arduino cnc project, I&rsquo;ve got no plan on using this (just created it to confirm the wiring is what I thought it was), but maybe a good test</p>
+<ul>
+<li><a href="../../images/PCB/Examples/arduino-cnc-shield-2.02-F.Cu.svg">Front Layer</a></li>
+<li><a href="../../images/PCB/Examples/arduino-cnc-shield-2.02-B.Cu.svg">Back Layer</a></li>
+</ul>
 <h2 id="todo">TODO</h2>
 <ul>
-<li>Try a Z Height from the top of the board to the laser, instead of using the bed as the zero point</li>
-<li>Try different powers, starting with the lowest power first</li>
-<li>Look into using a Jig for Alignment</li>
+<li>None of this is tested so far</li>
+<li>One suggestion is that lines should be no thinner than 1.5pt, 5pt font. Further experimentation is needed</li>
+<li>I could do with trying to print adafruit&rsquo;s PCB ruler as a test.</li>
 </ul></div>
         </div>
 

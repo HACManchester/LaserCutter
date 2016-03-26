@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,49 +13,67 @@
         
     <url>
      <loc>None/PCB/Overview/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/PCB/Kicad-GerberExport/</loc>
+     <lastmod>2016-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/PCB/FlatCAM-SingleSided/</loc>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/CopperBoard-Prep/</loc>
-     <lastmod>2016-03-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/Design-KiCad/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/Laser-Etching/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/Cleaning-Board/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/Etching-Tank/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/PCB/SolderPaste-Layer/</loc>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/Further-Ideas/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/PCB/Links/</loc>
-     <lastmod>2016-03-19</lastmod>
+     <lastmod>2016-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/PCB/KiCad-Svg/</loc>
+     <lastmod>2016-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

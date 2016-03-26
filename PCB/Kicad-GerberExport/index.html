@@ -7,16 +7,16 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Manchester HacSpace - Laser Cutter</title>
+	<title>Kicad - Exporting Gerbers - Manchester HacSpace - Laser Cutter</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
-        <link href="./css/highlight-fix.css" rel="stylesheet">
-        <link href="./css/highlight-custom.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/highlight-fix.css" rel="stylesheet">
+        <link href="../../css/highlight-custom.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Manchester HacSpace - Laser Cutter</a>
+            <a class="navbar-brand" href="../..">Manchester HacSpace - Laser Cutter</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -52,79 +52,79 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="../..">Home</a>
                 </li>
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">PCB <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="PCB/Overview/">Overview</a>
+    <a href="../Overview/">Overview</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Kicad - Exporting Gerbers</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Kicad-GerberExport/">Kicad - Exporting Gerbers</a>
+    <a href="../FlatCAM-SingleSided/">FlatCAM - Single Sided Boards</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/FlatCAM-SingleSided/">FlatCAM - Single Sided Boards</a>
+    <a href="../CopperBoard-Prep/">Prepping the Board</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/CopperBoard-Prep/">Prepping the Board</a>
+    <a href="../Laser-Etching/">Laser Engraving</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Laser-Etching/">Laser Engraving</a>
+    <a href="../Cleaning-Board/">Cleaning the Board</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Cleaning-Board/">Cleaning the Board</a>
+    <a href="../Etching-Tank/">Etching Tank</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Etching-Tank/">Etching Tank</a>
+    <a href="../SolderPaste-Layer/">Solder Paste Mylar</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/SolderPaste-Layer/">Solder Paste Mylar</a>
+    <a href="../Further-Ideas/">Further Ideas</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Further-Ideas/">Further Ideas</a>
+    <a href="../Links/">Links</a>
 </li>
 
                     
                         
 <li >
-    <a href="PCB/Links/">Links</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="PCB/KiCad-Svg/">Kicad - Exporting as SVG</a>
+    <a href="../KiCad-Svg/">Kicad - Exporting as SVG</a>
 </li>
 
                     
@@ -141,13 +141,13 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="../Overview/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="PCB/Overview/">
+                    <a rel="prev" href="../FlatCAM-SingleSided/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -161,15 +161,54 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#manchester-hacspace-laser-cutter">Manchester Hacspace Laser Cutter</a></li>
+        <li class="main active"><a href="#kicad-exporting-gerbers">Kicad Exporting Gerbers</a></li>
+        
+            <li><a href="#setting-the-auxiliary-axis">Setting the Auxiliary Axis</a></li>
+        
+            <li><a href="#exporting-gerbers">Exporting Gerbers</a></li>
+        
+            <li><a href="#exporting-drill-files">Exporting Drill Files</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="manchester-hacspace-laser-cutter">Manchester Hacspace Laser Cutter</h1>
-<p>TODO</p></div>
+<h1 id="kicad-exporting-gerbers">Kicad Exporting Gerbers</h1>
+<p>One of the first steps we need to do is get some gerber and drill files exported from Kicad.
+These files will be imported into FlatCAM for isolation routing and for generating the svg export for visicut.</p>
+<p>TODO I&rsquo;m not sure of the minimum track width at this stage, something to be looked into, maybe a drc check file for KiCad</p>
+<h2 id="setting-the-auxiliary-axis">Setting the Auxiliary Axis</h2>
+<p>First we want to set the Auxiliary to the bottom left hand corner of the board <br></p>
+<ul>
+<li>Select <strong>Place -&gt; Drill and Place Offset</strong> from the Menu</li>
+<li>Click on the bottom left hand corner of the board for the 0,0 point</li>
+<li>A red circle should now show up at this corner</li>
+</ul>
+<p><a href="../../images/PCB/KiCad/KiCad-Gerber1.png"><img src="../../images/PCB/KiCad/KiCad-Gerber1.png" height="50%" width="50%" ></a> <br></p>
+<p><a href="../../images/PCB/KiCad/KiCad-Gerber2.png"><img src="../../images/PCB/KiCad/KiCad-Gerber2.png" height="50%" width="50%" ></a> <br></p>
+<h2 id="exporting-gerbers">Exporting Gerbers</h2>
+<p>Next we want to use the Plot option to output the drill and Gerber Files</p>
+<ul>
+<li>Select <strong>File -&gt; Plot</strong> from the menu</li>
+</ul>
+<p><a href="../../images/PCB/KiCad/KiCad-Gerber3.png"><img src="../../images/PCB/KiCad/KiCad-Gerber3.png" height="50%" width="50%" ></a> <br></p>
+<ul>
+<li>Next select the output directory</li>
+<li>Select which layers to export (Top / Bottom)</li>
+<li>Make sure <strong>Use auxiliary axis as origin</strong> is ticked</li>
+<li>Click Plot</li>
+</ul>
+<p><a href="../../images/PCB/KiCad/KiCad-Gerber4.png"><img src="../../images/PCB/KiCad/KiCad-Gerber4.png" height="50%" width="50%" ></a> <br></p>
+<h2 id="exporting-drill-files">Exporting Drill Files</h2>
+<p>Next we&rsquo;re going to generate the drill files, since FlatCAM can read these too</p>
+<ul>
+<li>Select <strong>Generate Drill File</strong></li>
+<li>You should be able to leave most of the options at the defaults</li>
+<li>Make sure <strong>Drill Origin</strong> is set to <strong>Auxiliary Axis</strong></li>
+<li>Click <strong>Drill File</strong> to generate the .drl file</li>
+</ul>
+<p><a href="../../images/PCB/KiCad/KiCad-Gerber5.png"><img src="../../images/PCB/KiCad/KiCad-Gerber5.png" height="50%" width="50%" ></a> <br></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -178,12 +217,12 @@
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
