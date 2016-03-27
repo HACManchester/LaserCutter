@@ -25,6 +25,10 @@ They sell some perspex / bits of wood, and glass paint for experimenting with pc
 With some types of material one approach to cutting is to use a low power setting but with multiple passes <br>
 However one thing to watch out for is that you may end up with a build up of carbon along the cut line
 
-### Conductive Paint
+### Acrylic
 
-One idea might be to experiment with conductive paint and copper plating on a laser friendly board
+One approach to making a 3D thing is to use Acrylic then glue the parts together. <br>
+3mm Acrylic A4 size is fairly cheap from Fred Aldous about about 3 pound
+
+Acrylic glue appears to work by softening both sides and melting them together.
+But it's important to use sand paper fine grit, or perhaps the belt sander to get a smooth edge first

@@ -1,12 +1,12 @@
 site_name: Manchester HacSpace - Laser Cutter
 pages:
 - Home: index.md
-- LaserCutter:
-    - Overview: LaserCutter/Overview.md
-    - Software: LaserCutter/Software.md
-    - Design: LaserCutter/Design.md
-    - Cutting: LaserCutter/Cutting.md
-    - Materials: LaserCutter/Materials.md
+- OrangeLaser:
+    - Software: OrangeLaser/Software.md
+    - Design: OrangeLaser/Design.md
+    - Cutting: OrangeLaser/Cutting.md
+    - Materials: OrangeLaser/Materials.md
+    - Ideas: OrangeLaser/Ideas.md
 
 - PCB:
     - Overview: PCB/Overview.md

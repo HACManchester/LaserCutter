@@ -8,4 +8,4 @@
   * Additional Markdown plugins for arrows / icons
   * Can we import a 3D / WebGL model of the laser cutter for the main index?
   * Double sided boards via FlatCAM / Alignment Holes
-
+  * Add in Link to building flatcam / downloading depends
