@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,74 +12,32 @@
     
         
     <url>
-     <loc>None/PCB/Overview/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <loc>None/OrangeLaser/Software/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/PCB/Kicad-GerberExport/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <loc>None/OrangeLaser/Design/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/PCB/FlatCAM-SingleSided/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <loc>None/OrangeLaser/Cutting/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/PCB/CopperBoard-Prep/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <loc>None/OrangeLaser/Materials/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/PCB/Laser-Etching/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/Cleaning-Board/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/Etching-Tank/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/SolderPaste-Stencil/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/SolderMask/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/Further-Ideas/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/Links/</loc>
-     <lastmod>2016-03-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/PCB/KiCad-Svg/</loc>
-     <lastmod>2016-03-26</lastmod>
+     <loc>None/OrangeLaser/Ideas/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

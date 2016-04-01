@@ -2,348 +2,268 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Manchester Hacspace Laser Cutter\n\n\nTODO", 
+            "text": "Laser Cutter\n\n\nThe Hackspace laser cutter is only to be used by those who have received an induction,\nhowever there\ns lots you need to do before you get anywhere near the actual hardware\n\n\nBook an induction\n  (members only - sorry).\n\n\nTop-level specifications\n\n\n\n\nA2-ish Bed size, 600mm x 400mm\n\n\n60W Laser Tube\n\n\nAwesome Extraction\n\n\nAir Assist\n\n\nRed-dot laser for bounds checking\n\n\nSmart cooling\n\n\nRise-and-fall bed, Super useful for engraving stuff on stuff\n\n\n[TBC] Rotary Axis\n\n\n\n\n| Informational |\n\n\n| If the laser cutter does \nanything\n out of the ordinary please make sure it\ns reported to a laser maintainer. If the response is \nplease put the out of order sign on the cutter\n then do that. \nDO NOT ATTEMPT TO FIX THE CUTTER YOURSELF.\n If it is clearly not functioning, put the out of order sign on it and then report it. We will fix it as soon as possible. |\n\n\nTODO Add Image", 
             "title": "Home"
         }, 
         {
-            "location": "/#manchester-hacspace-laser-cutter", 
-            "text": "TODO", 
-            "title": "Manchester Hacspace Laser Cutter"
+            "location": "/#laser-cutter", 
+            "text": "The Hackspace laser cutter is only to be used by those who have received an induction,\nhowever there s lots you need to do before you get anywhere near the actual hardware  Book an induction   (members only - sorry).", 
+            "title": "Laser Cutter"
         }, 
         {
-            "location": "/PCB/Overview/", 
-            "text": "Overview\n\n\nFor homebrew PCB\ns there are a few different approaches.\nThis includes the toner transfer / iron method, the toner transfer / Laminator approach (which is more accurate).\n\n\nOne approach is to use a laser cutter to remove paint from a Copper board, then etch the board.\nThis can however require a few tricks to get it right.\n\n\nBenefits\n\n\n\n\nAccuracy\n\n\nRepeatibility\n\n\nDual sided boards (with via\ns) / Alignment\n\n\nPossibly Solder Masks with Glass paint, using the laser to remove paint on the exposed pads", 
-            "title": "Overview"
+            "location": "/#top-level-specifications", 
+            "text": "A2-ish Bed size, 600mm x 400mm  60W Laser Tube  Awesome Extraction  Air Assist  Red-dot laser for bounds checking  Smart cooling  Rise-and-fall bed, Super useful for engraving stuff on stuff  [TBC] Rotary Axis", 
+            "title": "Top-level specifications"
         }, 
         {
-            "location": "/PCB/Overview/#overview", 
-            "text": "For homebrew PCB s there are a few different approaches.\nThis includes the toner transfer / iron method, the toner transfer / Laminator approach (which is more accurate).  One approach is to use a laser cutter to remove paint from a Copper board, then etch the board.\nThis can however require a few tricks to get it right.", 
-            "title": "Overview"
+            "location": "/#informational", 
+            "text": "| If the laser cutter does  anything  out of the ordinary please make sure it s reported to a laser maintainer. If the response is  please put the out of order sign on the cutter  then do that.  DO NOT ATTEMPT TO FIX THE CUTTER YOURSELF.  If it is clearly not functioning, put the out of order sign on it and then report it. We will fix it as soon as possible. |  TODO Add Image", 
+            "title": "| Informational |"
         }, 
         {
-            "location": "/PCB/Overview/#benefits", 
-            "text": "Accuracy  Repeatibility  Dual sided boards (with via s) / Alignment  Possibly Solder Masks with Glass paint, using the laser to remove paint on the exposed pads", 
-            "title": "Benefits"
+            "location": "/OrangeLaser/Software/", 
+            "text": "Software\n\n\nDownload Links\n\n\nIn order to create your first design, you should install one of the following:\n\n\n\n\nInkscape\n (recommended)\n\n\nAdobe Illustrator\n\n\nOpenSCAD\n\n\n\n\nWhatever you\nre using, it\ns recommended to install Inkscape as that can be used to tweak designs prior to importing them for cutting or etching.\n\n\nFor Cutting you\nll also need Visicut\n\n\n\n\nhttps://github.com/t-oster/VisiCut/releases/tag/1.7_310\n\n\nhttp://download.visicut.org/\n\n\n\n\nNote version 1.7.9 seems to have issues with Engraving, I\nve found that version 1.7.310 seems to work the best\n\n\nVisicut\n\n\nVisicut is the software that converts vector files into the code that drives the laser cutter.\n\n\nAfter you\nve put together your design for cutting. \n\nVisicut is used to convert files into the format needed to drive the laser cutter.\n\n\n\n\nhttps://github.com/t-oster/VisiCut/releases/tag/1.7_310\n\n\n(If you are using a mac the cross-platform Java implementation works best.)\n\n\n\n\nIf you are on OSX, you may need to download the Platform Independant ZIP instead of the OSX Release.\nIf you are a software developer with experience of OSX packaging, \nhttps://github.com/t-oster/VisiCut/issues/171\n\n\nOn first run, visicut will ask if you want to download settings.\nYou do, just select Manchester, UK: Hackspace from the list and visicut will automatically install the latest settings for our laser cutter.\nYou can use this same method to reset your settings back to the default, under the menu item Options \n Settings \n Download Recommended Settings.\nYou may get an error message, error importing settings. If this occurs, just close and reopen visicut for the settings to apply.\n\n\nInkScape\n\n\nFor vector editing and manipulation, we suggest people use inkscape. It is a free and powerful vector editing package, and integrates well with visicut.\n\n\n\n\nInkscape\n\n\n\n\nOnce you have visicut and inkscape installed, and have run inkscape at least once (so it creates its folders in your home drive), You can install the inkscape addon for visicut by clicking Extras \n Install Inkscape Extension. Close and reopen inkscape and you should have new options for sending vectors directly to visicut.\n\n\nVisicut Extension\n\n\nTo Setup the inkscape extension for Visicut within Windows\n\n\n\n\nOpen Visicut\n\n\nSelect Extras / Install Inkscape Extension\n\n\nFor windows 7 this should install into the directory \nC:\\Users[username]\\AppData\\Roaming\\inkscape\n\n\nClose and reopen inkscape and you should have new options for sending vectors directly to visicut.\n\n\nThe Extension will be visible within Inkscape under \nExtensions Menu -\n Lasercut Path -\n Open in Visicut\n\n\n\n\nThere\ns also a link here \nhttp://hci.rwth-aachen.de/visicut_inkscape_plugin\n \n\n\nTODO this seems broken at the moment, check for fixes\n\n\nTabbed Box Extension\n\n\nFor making boxes with the laser cutter, there\ns a tabbed box maker extension for inkscape\n\n\n\n\nhttp://www.keppel.demon.co.uk/111000/111000.html\n\n\n\n\nHacMan - Visicut Settings\n\n\nThe current way to get the latest settings for visicut is to\n\n\n\n\nOpen Visicut\n\n\nSelect Options -\n Settings -\n Download recommended settings -\n United Kingdom, Manchester: Hackspace\n\n\nYou may get an error about downloading the settings, ignore this\n\n\nRestart Visicut\n\n\nThere should now be 2 laser cutter settings for the blue and orange laser cutters on the right hand side\n\n\n\n\nFor reference the original link to the visicut settings was https://github.com/hacmanchester/visicut-settings But this is no longer in use\n\n\nAs time goes on the settings for the orange laser may be updated / added to for different types of materials\nso you may want to try re-downloaded the settings every now and again just to refresh them with new presets for different materials\n\n\nWindows Setup\n\n\nTODO remove this?\n\n\nTo clone the settings on a windows machine\n\n\n\n\nFirst install \nGit\n\n\ncreate a directory for git files (e.g. C:\\GITHUB)\n\n\nClone to a local directory\n\n\n\n\ncd C:\\GIHUB\\\ngit clone https://github.com/HACManchester/visicut-settings.git\n\n\n\n\nAnother way is just to click the \nDownload Zip\n button on github and extract the files\n\n\nTo install the files for Windows:\n\n\n\n\nStartup Visicut for the first time, this should create a directory with some default files in under C:\\Users[username].visicut\\\n\n\nClose Visicut\n\n\nCopy and paste the files downloaded from git over the top of the default visicut settings files\n\n\nC:\\GITHUB\\visicut-settings -\n C:\\Users\\username.visicut\\\n\n\nStartup visicut\n\n\n\n\nLinux Setup\n\n\nTODO remove this?\n\n\nTo get the settings in a terminal type:\n\n\ncd ~\nrm -rf .visicut\ngit clone https://github.com/HACManchester/visicut-settings.git .visicut\n\n\n\n\nTo get updated settings, either repeat the above, or type:\n\n\ncd ~/.visicut/\ngit stash\ngit pull origin master\ngit stash apply", 
+            "title": "Software"
         }, 
         {
-            "location": "/PCB/Kicad-GerberExport/", 
-            "text": "Kicad Exporting Gerbers\n\n\nOne of the first steps we need to do is get some gerber and drill files exported from Kicad.\nThese files will be imported into FlatCAM for isolation routing and for generating the svg export for visicut.\n\n\nTODO I\nm not sure of the minimum track width at this stage, something to be looked into, maybe a drc check file for KiCad\n\n\nSetting the Auxiliary Axis\n\n\nFirst we want to set the Auxiliary to the bottom left hand corner of the board \n\n\n\n\nSelect \nPlace -\n Drill and Place Offset\n from the Menu\n\n\nClick on the bottom left hand corner of the board for the 0,0 point\n\n\nA red circle should now show up at this corner\n\n\n\n\n \n\n\n \n\n\nExporting Gerbers\n\n\nNext we want to use the Plot option to output the drill and Gerber Files\n\n\n\n\nSelect \nFile -\n Plot\n from the menu\n\n\n\n\n \n\n\n\n\nNext select the output directory\n\n\nSelect which layers to export (Top / Bottom)\n\n\nMake sure \nUse auxiliary axis as origin\n is ticked\n\n\nClick Plot\n\n\n\n\n \n\n\nExporting Drill Files\n\n\nNext we\nre going to generate the drill files, since FlatCAM can read these too\n\n\n\n\nSelect \nGenerate Drill File\n\n\nYou should be able to leave most of the options at the defaults\n\n\nMake sure \nDrill Origin\n is set to \nAuxiliary Axis\n\n\nClick \nDrill File\n to generate the .drl file", 
-            "title": "Kicad - Exporting Gerbers"
-        }, 
-        {
-            "location": "/PCB/Kicad-GerberExport/#kicad-exporting-gerbers", 
-            "text": "One of the first steps we need to do is get some gerber and drill files exported from Kicad.\nThese files will be imported into FlatCAM for isolation routing and for generating the svg export for visicut.  TODO I m not sure of the minimum track width at this stage, something to be looked into, maybe a drc check file for KiCad", 
-            "title": "Kicad Exporting Gerbers"
-        }, 
-        {
-            "location": "/PCB/Kicad-GerberExport/#setting-the-auxiliary-axis", 
-            "text": "First we want to set the Auxiliary to the bottom left hand corner of the board    Select  Place -  Drill and Place Offset  from the Menu  Click on the bottom left hand corner of the board for the 0,0 point  A red circle should now show up at this corner", 
-            "title": "Setting the Auxiliary Axis"
-        }, 
-        {
-            "location": "/PCB/Kicad-GerberExport/#exporting-gerbers", 
-            "text": "Next we want to use the Plot option to output the drill and Gerber Files   Select  File -  Plot  from the menu       Next select the output directory  Select which layers to export (Top / Bottom)  Make sure  Use auxiliary axis as origin  is ticked  Click Plot", 
-            "title": "Exporting Gerbers"
-        }, 
-        {
-            "location": "/PCB/Kicad-GerberExport/#exporting-drill-files", 
-            "text": "Next we re going to generate the drill files, since FlatCAM can read these too   Select  Generate Drill File  You should be able to leave most of the options at the defaults  Make sure  Drill Origin  is set to  Auxiliary Axis  Click  Drill File  to generate the .drl file", 
-            "title": "Exporting Drill Files"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/", 
-            "text": "FlatCAM - Single Sided boards\n\n\nThere\ns a piece of software called FlatCAM, normally this is used in situations where you want to mill out a PCB with a CNC.\nHowever it\ns also usefull for exporting SVG\ns from Gerbers and doing isolation routing.\n\n\n\n\nhttp://flatcam.org/\n\n\nhttp://flatcam.org/manual/index.html\n\n\nhttps://bitbucket.org/jpcgt/flatcam\n\n\n\n\nIsolation Routing\n\n\nIsolation routing is where you surround each track on the PCB with a line, so instead of removing all the Copper on the board\nthis just removes the minimum needed to seperate one track from another.\n\n\n\n\nIn the case of a Laser Cutter the less paint removed from the board the better, the more paint you remove the more likley it will be\n    that the paint will re-settle elsewhere on the board.\n\n\nJust having the outlines of the tracks removed by the etchant means that less etchant is needed to make the board.\n\n\nIt makes the board look cooler.\n\n\n\n\nThere\ns also features built into FlatCAM for double sided boards, and adding in holes for a jig which I\nm hoping to explore later on. \n\nThe export to SVG features is relatively new, and at the time of writing only available in the master branch.\nI\nve placed a working copy (python) under \nhttps://github.com/HACManchester/Apps.Cad/tree/master/Builds\n\n\nImporting Gerber into FlatCAM\n\n\nThe first step is to import the Gerber into FlatCAM, and a drill file if you\nve created one\n\n\n\n\nFile -\n Open -\n Select Gerber File\n\n\nFile -\n Open -\n Select Drill File\n\n\n\n\n \n\n\n(I should probably point out that the image pictured has tracks too small to be used with the laser, but this is only for demonstration purposes)\n\n\nGenerating the Geometry\n\n\nThe next step is to generate a Geometry for the imported Gerber, this is actually very easy\n\n\n\n\nSelect the imported gerber under the Project pane\n\n\nSwitch to the Selected Tab\n\n\nEnter in a tool diameter, this will represent the thickness of the line that will surround the track\n\n\nClick \nGenerate Geometry\n\n\nTODO I think the minimum will be 0.1mm further experimentation is needed\n\n\n\n\n \n\n\nThis should result in a red line surrounding everything\n\n\nGenerate the CNCJob\n\n\nNext we need to generate a CNCJob, in this case we\nre not going to use G-Code, but instead do an SVG Export of the result.\n\n\n\n\nSwitch to the Project Tab and select the generated Geometry\n\n\n\n\n \n\n\n\n\nNext Switch back to the Selected Tab\n\n\nClick Generate to generate a CNC Job\n\n\nThis should result in a blue line around the tracks, this is what we\nre interested in for the laser cutter\n\n\n\n\n \n\n\nExport the CNCJob\n\n\nThe final step is just to export the CNCJob as an SVG\n\n\n\n\nSwtich back to the Selected Tab\n\n\nSelect the new CNCJob\n\n\nSelect File -\n Export SVG from the menu\n\n\n\n\n \n\n\nThere\ns quite a lot of different settings you can play with for exporting just the solder pads for example. \n\nIf you want the drill holes to be etched as well, then also Export the imported drill file as an SVG, at which point we can then import it later on into Visicut.", 
-            "title": "FlatCAM - Single Sided Boards"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#flatcam-single-sided-boards", 
-            "text": "There s a piece of software called FlatCAM, normally this is used in situations where you want to mill out a PCB with a CNC.\nHowever it s also usefull for exporting SVG s from Gerbers and doing isolation routing.   http://flatcam.org/  http://flatcam.org/manual/index.html  https://bitbucket.org/jpcgt/flatcam", 
-            "title": "FlatCAM - Single Sided boards"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#isolation-routing", 
-            "text": "Isolation routing is where you surround each track on the PCB with a line, so instead of removing all the Copper on the board\nthis just removes the minimum needed to seperate one track from another.   In the case of a Laser Cutter the less paint removed from the board the better, the more paint you remove the more likley it will be\n    that the paint will re-settle elsewhere on the board.  Just having the outlines of the tracks removed by the etchant means that less etchant is needed to make the board.  It makes the board look cooler.   There s also features built into FlatCAM for double sided boards, and adding in holes for a jig which I m hoping to explore later on.  \nThe export to SVG features is relatively new, and at the time of writing only available in the master branch.\nI ve placed a working copy (python) under  https://github.com/HACManchester/Apps.Cad/tree/master/Builds", 
-            "title": "Isolation Routing"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#importing-gerber-into-flatcam", 
-            "text": "The first step is to import the Gerber into FlatCAM, and a drill file if you ve created one   File -  Open -  Select Gerber File  File -  Open -  Select Drill File      (I should probably point out that the image pictured has tracks too small to be used with the laser, but this is only for demonstration purposes)", 
-            "title": "Importing Gerber into FlatCAM"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#generating-the-geometry", 
-            "text": "The next step is to generate a Geometry for the imported Gerber, this is actually very easy   Select the imported gerber under the Project pane  Switch to the Selected Tab  Enter in a tool diameter, this will represent the thickness of the line that will surround the track  Click  Generate Geometry  TODO I think the minimum will be 0.1mm further experimentation is needed      This should result in a red line surrounding everything", 
-            "title": "Generating the Geometry"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#generate-the-cncjob", 
-            "text": "Next we need to generate a CNCJob, in this case we re not going to use G-Code, but instead do an SVG Export of the result.   Switch to the Project Tab and select the generated Geometry       Next Switch back to the Selected Tab  Click Generate to generate a CNC Job  This should result in a blue line around the tracks, this is what we re interested in for the laser cutter", 
-            "title": "Generate the CNCJob"
-        }, 
-        {
-            "location": "/PCB/FlatCAM-SingleSided/#export-the-cncjob", 
-            "text": "The final step is just to export the CNCJob as an SVG   Swtich back to the Selected Tab  Select the new CNCJob  Select File -  Export SVG from the menu      There s quite a lot of different settings you can play with for exporting just the solder pads for example.  \nIf you want the drill holes to be etched as well, then also Export the imported drill file as an SVG, at which point we can then import it later on into Visicut.", 
-            "title": "Export the CNCJob"
-        }, 
-        {
-            "location": "/PCB/CopperBoard-Prep/", 
-            "text": "Prepping the Copper Board\n\n\nUnwrap the Board\n\n\n\n\nFirst pull off the plastic from the copper board\n\n\nNext prep the board by roughing it up, perhaps by dipping it into etchant, or using a roughing stone\n\n\nNext clean the board with acetone\n\n\n\n\nOne suggestion is to use auto primer to make the paint stick the board better\n\n\nSpray the Board\n\n\nNext we need to spray the board. \n\nThe general view is that the more coats of paint the better, and that there should be at least 2 coats\nso that when removing the invisible layer left by the laser the smaller traces can remain on the board during cleaning\n\n\nPaint Types\n\n\nThere\ns a few different suggestions on the types of paint.\nThe main two mentioned in the links are\n\n\n\n\nBlack Auto primer (car paint I think)\n\n\nRustoleum Painters Touch 2xCoverage paint\n\n\n\n\nThere\ns also\n\n\n\n\nhttp://hackaday.com/2010/08/17/negative-laser-etching/\n\n\nBlack acrylic spray paint (Krylon brand) - suggested on instructables\n\n\nPlastifier mask (acrylic varnish / plastifiant)\n\n\n\n\nI\nve also got some black acrylic paint from WHS Smiths to try out (Humbrol).\nFor black acrylic paint, the suggestion is to use 3 - 5 coats allowing time for each coat to dry.", 
-            "title": "Prepping the Board"
-        }, 
-        {
-            "location": "/PCB/CopperBoard-Prep/#prepping-the-copper-board", 
+            "location": "/OrangeLaser/Software/#software", 
             "text": "", 
-            "title": "Prepping the Copper Board"
+            "title": "Software"
         }, 
         {
-            "location": "/PCB/CopperBoard-Prep/#unwrap-the-board", 
-            "text": "First pull off the plastic from the copper board  Next prep the board by roughing it up, perhaps by dipping it into etchant, or using a roughing stone  Next clean the board with acetone   One suggestion is to use auto primer to make the paint stick the board better", 
-            "title": "Unwrap the Board"
+            "location": "/OrangeLaser/Software/#download-links", 
+            "text": "In order to create your first design, you should install one of the following:   Inkscape  (recommended)  Adobe Illustrator  OpenSCAD   Whatever you re using, it s recommended to install Inkscape as that can be used to tweak designs prior to importing them for cutting or etching.  For Cutting you ll also need Visicut   https://github.com/t-oster/VisiCut/releases/tag/1.7_310  http://download.visicut.org/   Note version 1.7.9 seems to have issues with Engraving, I ve found that version 1.7.310 seems to work the best", 
+            "title": "Download Links"
         }, 
         {
-            "location": "/PCB/CopperBoard-Prep/#spray-the-board", 
-            "text": "Next we need to spray the board.  \nThe general view is that the more coats of paint the better, and that there should be at least 2 coats\nso that when removing the invisible layer left by the laser the smaller traces can remain on the board during cleaning", 
-            "title": "Spray the Board"
+            "location": "/OrangeLaser/Software/#visicut", 
+            "text": "Visicut is the software that converts vector files into the code that drives the laser cutter.  After you ve put together your design for cutting.  \nVisicut is used to convert files into the format needed to drive the laser cutter.   https://github.com/t-oster/VisiCut/releases/tag/1.7_310  (If you are using a mac the cross-platform Java implementation works best.)   If you are on OSX, you may need to download the Platform Independant ZIP instead of the OSX Release.\nIf you are a software developer with experience of OSX packaging,  https://github.com/t-oster/VisiCut/issues/171  On first run, visicut will ask if you want to download settings.\nYou do, just select Manchester, UK: Hackspace from the list and visicut will automatically install the latest settings for our laser cutter.\nYou can use this same method to reset your settings back to the default, under the menu item Options   Settings   Download Recommended Settings.\nYou may get an error message, error importing settings. If this occurs, just close and reopen visicut for the settings to apply.", 
+            "title": "Visicut"
         }, 
         {
-            "location": "/PCB/CopperBoard-Prep/#paint-types", 
-            "text": "There s a few different suggestions on the types of paint.\nThe main two mentioned in the links are   Black Auto primer (car paint I think)  Rustoleum Painters Touch 2xCoverage paint   There s also   http://hackaday.com/2010/08/17/negative-laser-etching/  Black acrylic spray paint (Krylon brand) - suggested on instructables  Plastifier mask (acrylic varnish / plastifiant)   I ve also got some black acrylic paint from WHS Smiths to try out (Humbrol).\nFor black acrylic paint, the suggestion is to use 3 - 5 coats allowing time for each coat to dry.", 
-            "title": "Paint Types"
+            "location": "/OrangeLaser/Software/#inkscape", 
+            "text": "For vector editing and manipulation, we suggest people use inkscape. It is a free and powerful vector editing package, and integrates well with visicut.   Inkscape   Once you have visicut and inkscape installed, and have run inkscape at least once (so it creates its folders in your home drive), You can install the inkscape addon for visicut by clicking Extras   Install Inkscape Extension. Close and reopen inkscape and you should have new options for sending vectors directly to visicut.", 
+            "title": "InkScape"
         }, 
         {
-            "location": "/PCB/Laser-Etching/", 
-            "text": "Laser Etching\n\n\nImportant\n\n\n\n\nThe information here should be for now considered experimental / untested.\n\n\nIt\ns probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.\n\n\nTry to use a highest speed / lowest power as possible to avoid reflections that might impact the optices from the copper\n\n\n\n\nOverview\n\n\nIt\ns not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.\nTo burn away copper with the laser would probably require oxygen assist, or a fibre laser.\nBut we can burn away paint from the board then use chemicals to etch away the exposed copper\n\n\nSome things to be aware of:\n\n\n\n\nWe need to try avoiding going over the board multiple times, this can lead to unpredictable results\n\n\nThe air assist should blow onto the part while it\ns being cut, according to Bob the vacuum is located at the bottom so cutting top to bottom should be okay\n    with the orange laser cutter\n\n\n\n\nImport into Visicut\n\n\nInitial Import\n\n\nAt this point we can now import each svg from KiCad into Visicut\n\n\n\n\nOpen up Visicut\n\n\nDrag and Drop the svg into Visicut\n\n\nSelect the Position Tab\n\n\nIf your including multiple layers such as the drill points and the pcb, use the center position option to get everything aligned okay\n\n\n\n\nImporting the Drill svg should allow etching within the drill holes to make locating the holes easier when actually drilling the final board.\n\n\n \n\n\nMapping the Colour\n\n\n\n\nSelect \nMap by Single Property\n\n\nSelect \nMap by Color\n\n\nTick the \nBlue\n colour under the pcb svg\n\n\nSelect \nEngrave Solid\n\n\n\n\n \n\n\nLaser Settings\n\n\n\n\nUnder Laser Settings\n\n\nMake sure speed is set to 100\n\n\nTODO\n check which power option is the best, starting from the lowest moving upwards\n\n\n\n\n \n\n\nDrill Points\n\n\nIf you want to etch away the holes for the drill points then rinse and repeat for the drill svg\n\n\n \n\n\nTODO\n\n\n\n\nTry a Z Height from the top of the board to the laser, instead of using the bed as the zero point\n\n\nTry different powers, starting with the lowest power first\n\n\nLook into using a Jig for Alignment", 
-            "title": "Laser Engraving"
+            "location": "/OrangeLaser/Software/#visicut-extension", 
+            "text": "To Setup the inkscape extension for Visicut within Windows   Open Visicut  Select Extras / Install Inkscape Extension  For windows 7 this should install into the directory  C:\\Users[username]\\AppData\\Roaming\\inkscape  Close and reopen inkscape and you should have new options for sending vectors directly to visicut.  The Extension will be visible within Inkscape under  Extensions Menu -  Lasercut Path -  Open in Visicut   There s also a link here  http://hci.rwth-aachen.de/visicut_inkscape_plugin    TODO this seems broken at the moment, check for fixes", 
+            "title": "Visicut Extension"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#laser-etching", 
+            "location": "/OrangeLaser/Software/#tabbed-box-extension", 
+            "text": "For making boxes with the laser cutter, there s a tabbed box maker extension for inkscape   http://www.keppel.demon.co.uk/111000/111000.html", 
+            "title": "Tabbed Box Extension"
+        }, 
+        {
+            "location": "/OrangeLaser/Software/#hacman-visicut-settings", 
+            "text": "The current way to get the latest settings for visicut is to   Open Visicut  Select Options -  Settings -  Download recommended settings -  United Kingdom, Manchester: Hackspace  You may get an error about downloading the settings, ignore this  Restart Visicut  There should now be 2 laser cutter settings for the blue and orange laser cutters on the right hand side   For reference the original link to the visicut settings was https://github.com/hacmanchester/visicut-settings But this is no longer in use  As time goes on the settings for the orange laser may be updated / added to for different types of materials\nso you may want to try re-downloaded the settings every now and again just to refresh them with new presets for different materials", 
+            "title": "HacMan - Visicut Settings"
+        }, 
+        {
+            "location": "/OrangeLaser/Software/#windows-setup", 
+            "text": "TODO remove this?  To clone the settings on a windows machine   First install  Git  create a directory for git files (e.g. C:\\GITHUB)  Clone to a local directory   cd C:\\GIHUB\\\ngit clone https://github.com/HACManchester/visicut-settings.git  Another way is just to click the  Download Zip  button on github and extract the files  To install the files for Windows:   Startup Visicut for the first time, this should create a directory with some default files in under C:\\Users[username].visicut\\  Close Visicut  Copy and paste the files downloaded from git over the top of the default visicut settings files  C:\\GITHUB\\visicut-settings -  C:\\Users\\username.visicut\\  Startup visicut", 
+            "title": "Windows Setup"
+        }, 
+        {
+            "location": "/OrangeLaser/Software/#linux-setup", 
+            "text": "TODO remove this?  To get the settings in a terminal type:  cd ~\nrm -rf .visicut\ngit clone https://github.com/HACManchester/visicut-settings.git .visicut  To get updated settings, either repeat the above, or type:  cd ~/.visicut/\ngit stash\ngit pull origin master\ngit stash apply", 
+            "title": "Linux Setup"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/", 
+            "text": "Design\n\n\nBasic Information\n\n\nTHe cutting area is:\n\n\n\n\n300 x 200 mm (A4 Landscape) for the Blue Laser\n\n\n600 x 400 mm (A2 Landscape) for the Orange Laser\n\n\nYou can cut material up to around 4mm thick\n\n\nSome people (everyone bar Bob) have been having problems with red and black. \n\n    If you\nre trying to do something intricate such as engraving we recommend NOT using black \nANYWHERE\n on your design \n\n    to avoid bits being engraved unnecessarily and wasting your time/money or potentially wrecking your design.\n\n\n\n\nInkscape\n\n\nSuggested Page Layout\n\n\n\n\nI like to use a 200mm x 300mm page, set to millimetres, with a 1mm grid.\n\n\nLaser_Template.svg\n Is a good template.\n    Just put it in the templates directory in your inkscape folder to use it.\n\n\n\n\nTemplates Directory:\n\n\n\n\nLinux: \n.config/inkscape/templates/\n\n\nWindows: *\n%APPDATA%\\Inkscape\\templates*\n\n\n\n\nDifferent Cuts / Colours\n\n\nEach different colour, line thickness, layer and group can be selected to cut differently, and the cut order changed. \nI normally use solid background colours in my inkscape designs to denote what should be cut and when\n\n\nDesigning the cut\n\n\nFirst make an object to cut using inkscape\n\n\nNotes\n\n\n\n\nWhen creating an image to cut it needs to be all lines or all fill\n\n\nMake sure any lines are not dotted lines and are single fill lines\n\n\nit shouldn\nt be a mix of both or the laser cutter may throw a hissy fit\n\n\nThe thing your engraving should be surrounded by a box or shape to cut it out as the final step\n\n\nThe cut lines should have a different colour than the engraving lines (each type of laser strength should have a different colour)\n\n\n\n\nSolidworks\n\n\nIf your importing a design from Solidworks the best way to do it is to export the model to a DXF file first\n\n\n\n\nOpen up the 3d model within solidworks\n\n\nSelect File -\n Save As\n\n\nSelect Dwg in the drop down file type list and click Save\n\n\nAt this point some options will be visible on the left hand side which we need to set before the actual save is done\n\n\nIn the Views to Export, untick Current, and tick Top\n\n\nThe other options such as Alignment can be left as defaults\n\n\nNext make sure the view is a direct top down view, with the X / Y / Z cross at the bottom left, click it to make sure the view is aligned\n\n\nClick the tick button\n\n\nA preview will be visible of the outputed diagram before it is saved\n\n\nImport the DWF file into inkscape\n\n\nWhen prompted make sure to untick the option to scale the image to A4, we want to make sure the measurements are accurate\n\n\n\n\nVisicut\n\n\nImporting the Design into Visicut\n\n\nNext we need to import the design from InkScape to Visicut\n\n\n\n\nWithin Inkscape select \nExtensions -\n Lasercut Path -\n Add to Visicut\n\n\nplace the design towards the bottom left hand corner as it\ns more accurate there and this is where the zero point is\n\n\nTry not to go within the last 5mm of the edges, the small edge stop within the cutter will align the part as such\n\n\n\n\nIf the Visicut extension doesn\nt work for any reason, save the design off as an svg, and re load directly into visicut. Note any text needs to be converted into paths first\n\n\nTypes of Cut\n\n\nThere are several types of laser strength / profile \n\nMarking is a very light form of engraving\n\n\n\n\n\n\n\n\nType of Cut\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nIgnore\n\n\nIgnore the layer in the diagram\n\n\n\n\n\n\nMark Shallow\n\n\nMark Shallow\n\n\n\n\n\n\nMark Deep\n\n\nMark Deep\n\n\n\n\n\n\nEngrave Dithered\n\n\nEngrave Dithered - darker colour equals deeper cut\n\n\n\n\n\n\nEngrave Solid\n\n\nEngrave Solid\n\n\n\n\n\n\nCut\n\n\nCut all the way through the material\n\n\n\n\n\n\n\n\nSetting the layer profiles\n\n\nNext we need to map each layer in the design to a cut profile (Laser speed / strength)\n\n\n\n\nSelect the material (e.g. Acrylic)\n\n\nSelect the material thickness (e.g. 3mm)\n\n\nUnder the Mapping tab, select \nMap by Fill Colour\n\n\nUse the shift key in Visicut to view overlaps\n\n\n\n\nNext re-arrange the layers and select the type of cut\n\n\n\n\nPlace layers with engraving at the top of the list\n\n\nPlace layers for cutting holes in the middle of the list\n\n\nPlace the final cut stage as the last in the list\n\n\nmake sure all layers needed are ticked\n\n\n\n\nIt\ns best to cut the outerline / edge last as the piece will move around after this is done \n\nso make sure to do this stage after any holes\n\n\nLaser Settings\n\n\nNext we need to make sure the settings under the laser settings tab are sane / correct\n\n\nFor Acrylic:\n\n\n\n\n\n\n\n\nProfile Power\n\n\nPower\n\n\nSpeed\n\n\nOther\n\n\n\n\n\n\n\n\n\n\nMark Shallow\n\n\n10\n\n\n80\n\n\n\n\n\n\n\n\nMark Deep\n\n\n100\n\n\n70\n\n\n\n\n\n\n\n\nEngrave Dithered\n\n\n20\n\n\n100\n\n\nEngrave Bottom up: \nunticked\n \n Engrave Unidirectional: \nunticked\n\n\n\n\n\n\nEngrave Solid\n\n\n20\n\n\n100\n\n\nEngrave Bottom up: ticked\n\n\n\n\n\n\nCut\n\n\n100\n\n\n6", 
+            "title": "Design"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#design", 
             "text": "", 
-            "title": "Laser Etching"
+            "title": "Design"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#important", 
-            "text": "The information here should be for now considered experimental / untested.  It s probably best to check with the Master Laser Guardian first (Bob) before actually trying anything.  Try to use a highest speed / lowest power as possible to avoid reflections that might impact the optices from the copper", 
-            "title": "Important"
+            "location": "/OrangeLaser/Design/#basic-information", 
+            "text": "THe cutting area is:   300 x 200 mm (A4 Landscape) for the Blue Laser  600 x 400 mm (A2 Landscape) for the Orange Laser  You can cut material up to around 4mm thick  Some people (everyone bar Bob) have been having problems with red and black.  \n    If you re trying to do something intricate such as engraving we recommend NOT using black  ANYWHERE  on your design  \n    to avoid bits being engraved unnecessarily and wasting your time/money or potentially wrecking your design.", 
+            "title": "Basic Information"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#overview", 
-            "text": "It s not possible to burn away copper with a Co2 Laser, the copper acts like a heat sink and draws away too much of the heat.\nTo burn away copper with the laser would probably require oxygen assist, or a fibre laser.\nBut we can burn away paint from the board then use chemicals to etch away the exposed copper  Some things to be aware of:   We need to try avoiding going over the board multiple times, this can lead to unpredictable results  The air assist should blow onto the part while it s being cut, according to Bob the vacuum is located at the bottom so cutting top to bottom should be okay\n    with the orange laser cutter", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/PCB/Laser-Etching/#import-into-visicut", 
+            "location": "/OrangeLaser/Design/#inkscape", 
             "text": "", 
-            "title": "Import into Visicut"
+            "title": "Inkscape"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#initial-import", 
-            "text": "At this point we can now import each svg from KiCad into Visicut   Open up Visicut  Drag and Drop the svg into Visicut  Select the Position Tab  If your including multiple layers such as the drill points and the pcb, use the center position option to get everything aligned okay   Importing the Drill svg should allow etching within the drill holes to make locating the holes easier when actually drilling the final board.", 
-            "title": "Initial Import"
+            "location": "/OrangeLaser/Design/#suggested-page-layout", 
+            "text": "I like to use a 200mm x 300mm page, set to millimetres, with a 1mm grid.  Laser_Template.svg  Is a good template.\n    Just put it in the templates directory in your inkscape folder to use it.   Templates Directory:   Linux:  .config/inkscape/templates/  Windows: * %APPDATA%\\Inkscape\\templates*", 
+            "title": "Suggested Page Layout"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#mapping-the-colour", 
-            "text": "Select  Map by Single Property  Select  Map by Color  Tick the  Blue  colour under the pcb svg  Select  Engrave Solid", 
-            "title": "Mapping the Colour"
+            "location": "/OrangeLaser/Design/#different-cuts-colours", 
+            "text": "Each different colour, line thickness, layer and group can be selected to cut differently, and the cut order changed. \nI normally use solid background colours in my inkscape designs to denote what should be cut and when", 
+            "title": "Different Cuts / Colours"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#laser-settings", 
-            "text": "Under Laser Settings  Make sure speed is set to 100  TODO  check which power option is the best, starting from the lowest moving upwards", 
+            "location": "/OrangeLaser/Design/#designing-the-cut", 
+            "text": "First make an object to cut using inkscape  Notes   When creating an image to cut it needs to be all lines or all fill  Make sure any lines are not dotted lines and are single fill lines  it shouldn t be a mix of both or the laser cutter may throw a hissy fit  The thing your engraving should be surrounded by a box or shape to cut it out as the final step  The cut lines should have a different colour than the engraving lines (each type of laser strength should have a different colour)", 
+            "title": "Designing the cut"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#solidworks", 
+            "text": "If your importing a design from Solidworks the best way to do it is to export the model to a DXF file first   Open up the 3d model within solidworks  Select File -  Save As  Select Dwg in the drop down file type list and click Save  At this point some options will be visible on the left hand side which we need to set before the actual save is done  In the Views to Export, untick Current, and tick Top  The other options such as Alignment can be left as defaults  Next make sure the view is a direct top down view, with the X / Y / Z cross at the bottom left, click it to make sure the view is aligned  Click the tick button  A preview will be visible of the outputed diagram before it is saved  Import the DWF file into inkscape  When prompted make sure to untick the option to scale the image to A4, we want to make sure the measurements are accurate", 
+            "title": "Solidworks"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#visicut", 
+            "text": "", 
+            "title": "Visicut"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#importing-the-design-into-visicut", 
+            "text": "Next we need to import the design from InkScape to Visicut   Within Inkscape select  Extensions -  Lasercut Path -  Add to Visicut  place the design towards the bottom left hand corner as it s more accurate there and this is where the zero point is  Try not to go within the last 5mm of the edges, the small edge stop within the cutter will align the part as such   If the Visicut extension doesn t work for any reason, save the design off as an svg, and re load directly into visicut. Note any text needs to be converted into paths first", 
+            "title": "Importing the Design into Visicut"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#types-of-cut", 
+            "text": "There are several types of laser strength / profile  \nMarking is a very light form of engraving     Type of Cut  Description      Ignore  Ignore the layer in the diagram    Mark Shallow  Mark Shallow    Mark Deep  Mark Deep    Engrave Dithered  Engrave Dithered - darker colour equals deeper cut    Engrave Solid  Engrave Solid    Cut  Cut all the way through the material", 
+            "title": "Types of Cut"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#setting-the-layer-profiles", 
+            "text": "Next we need to map each layer in the design to a cut profile (Laser speed / strength)   Select the material (e.g. Acrylic)  Select the material thickness (e.g. 3mm)  Under the Mapping tab, select  Map by Fill Colour  Use the shift key in Visicut to view overlaps   Next re-arrange the layers and select the type of cut   Place layers with engraving at the top of the list  Place layers for cutting holes in the middle of the list  Place the final cut stage as the last in the list  make sure all layers needed are ticked   It s best to cut the outerline / edge last as the piece will move around after this is done  \nso make sure to do this stage after any holes", 
+            "title": "Setting the layer profiles"
+        }, 
+        {
+            "location": "/OrangeLaser/Design/#laser-settings", 
+            "text": "Next we need to make sure the settings under the laser settings tab are sane / correct  For Acrylic:     Profile Power  Power  Speed  Other      Mark Shallow  10  80     Mark Deep  100  70     Engrave Dithered  20  100  Engrave Bottom up:  unticked    Engrave Unidirectional:  unticked    Engrave Solid  20  100  Engrave Bottom up: ticked    Cut  100  6", 
             "title": "Laser Settings"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#drill-points", 
-            "text": "If you want to etch away the holes for the drill points then rinse and repeat for the drill svg", 
-            "title": "Drill Points"
+            "location": "/OrangeLaser/Cutting/", 
+            "text": "Cutting\n\n\nWhen lasering / cutting the main thing to be aware of is overheating\n\n\n\n\nThe laser cutter has a inbuilt water pump / cooler which needs to be running\n\n\nThere\ns also an extraction pipe for getting rid of the fumes\n\n\n\n\nWarnings\n\n\n\n\n\n\nThe water pump must be running before cutting\n \n\n    \nOtherwise you may cause damage to the Laser Cutter. This can be verified by checking the red light is on in the water cooling chamber\n\n\n\n\n\n\nAfter Cutting make sure to leave the cutter on for at least 5 mins to allow the water pump to cool.\n \n\n    \nOtherwise you may cause damage to the Laser Cutter\n\n\n\n\n\n\nMake sure to watch over the cutter as it\ns cutting. \n Rule 0 - don\nt be on fire\n\n\n\n\n\n\nFailure\n\n\nIn the event something goes wrong\n\n\n\n\nMail the mailing list with a short description of the problem\n\n\nWhat you were trying to do\n\n\nWhat you expected to happen\n\n\nWhat happened instead\n\n\n\n\n\n\nPut the out of order sign on the top of the cutter\n\n\nLet the cutter cool down for 5 mins before turning off\n\n\n\n\nIn the event of fire / emergency\n\n\n\n\nThere is an emergency stop button on the top panel that is functional. Opening the lid will stop the laser from firing however.\n\n\nIf you can smother the fire in-place using a piece of stock, do so.\n\n\nIf you cant smother it in place, put it on the floor and try to stomp it out.\n\n\nIf you cant do either of these. Leave the space immediately, and call 999. The address is Hackspace Manchester, 42 Edge Street, M4 1HN\n\n\n\n\nControl Panel\n\n\n\n\nThe big red button is used as a reset / emergency stop, this stops a laser job if it\ns in progress\n\n\nThe orange button in the center is used by nudging left and right for selecing menu entries\n\n\nThe red button is a \nback\n button in menus.\n\n\n\n\nTODO\n\n\n\n\nAttach a photo of the button layout\n\n\n\n\nMaking the Cut\n\n\nInitial Startup\n\n\n\n\nFirst place some money in the pot for using the cutter\n\n\nThere is a book for keeping track of usege of the laser so make sure to use this to track any iou\ns. Time log is in the front of the book, Money log is in the back.\n\n\nPlace the extractor pipe outside the window\n\n\nMake sure the electronics bench is turned on, and the power cable is plugged into the back of the cutter.\n\n\nCheck for a red light on the bottom left hand corner where the water cooling is, if there is no light this may be an indication that the water cooling is not working in which case email a fault report to the mailing list.\n\n\n\n\nPositioning the part\n\n\nWith the orange laser the only thing to worry about is the Z axis.\nThere is a switch on the right hand side of the machine that can be used to lower or raise the main bed of the machine. \n\nIt\ns a bit slow for now, but make sure not to crash the bed into the laser head, since currently there isn\nt a limit switch installed\n\n\nThere is a small wooden guide inside the machine that can be used to position / zero the height against the bed (the default position).\nThis goes in between the bed and the left-hand part of the laser cutter, as in the following photo:\n\n\nTODO Add Image\n\n\n\n\nFor cutting materials up to 6mm it\ns best to have the z height set to bed level.\n\n\nFor cutting materials over 6mm, try to keep the z height 6mm into the material. Multiple passes may be needed.\n\n\nFor engraving set the focal point to the height of the material by placing the guide on top of it.\n\n\nIf you want crisp engraving on thick stock, you will need to do a 2-stage engrave / cut with the focal point initially set to the top of your material, and then re-set to the correct height for your cut.\n\n\nPlace the part into the cutter\n\n\nWhen cutting try to leave the cover on both sides of the material, or if only one side the bottom (not the top)\n\n\n\n\nTest the Laser positioning\n\n\nNext we\nre going to do a boundary test to make sure the laser cutter is working on the area we think it\ns going to\n\n\n\n\nClick Execute in Visicut\n\n\nWait for the small LCD on the Cutter it to say the file name\n\n\nNudge the center orange button to the right to select boundary\n\n\nPress the center orange button, this will cause the laser to trace the box outline of where the cut will be done on the material\n\n\nThis can be done with the lid open to assist in placing your part, however watch for pinch hazards.\n\n\nAlso an indication of the size of the boundary area will be shown on the LCD\n\n\nPress the orange button again to go back to the main menu\n\n\n\n\nDo the cut\n\n\nAt this stage you should now be ready to do the cut for real\n\n\n\n\nMake sure the lid is closed, The laser wont fire with it open.\n\n\nThe LCD should show Run on the screen\n\n\nPress the orange button to start the run job\n\n\n\n\nShutdown\n\n\n\n\nMake sure to bring the pipe back in from outside of the window\n\n\nAfter making any kind of cut, make sure to run the cutter for at least 5mins to allow the water pump to cool down the cutter, otherwise bad things may happen\n\n\nThere is a red switch on the back for turning off the laser, but once in place it should be on most of the time anyway", 
+            "title": "Cutting"
         }, 
         {
-            "location": "/PCB/Laser-Etching/#todo", 
-            "text": "Try a Z Height from the top of the board to the laser, instead of using the bed as the zero point  Try different powers, starting with the lowest power first  Look into using a Jig for Alignment", 
-            "title": "TODO"
+            "location": "/OrangeLaser/Cutting/#cutting", 
+            "text": "When lasering / cutting the main thing to be aware of is overheating   The laser cutter has a inbuilt water pump / cooler which needs to be running  There s also an extraction pipe for getting rid of the fumes", 
+            "title": "Cutting"
         }, 
         {
-            "location": "/PCB/Cleaning-Board/", 
-            "text": "Cleaning the board\n\n\nIn the areas where the paint has been burnt away there is still a residue left over that needs to be cleaned away \n\nTODO Check with Ruth on this\n\n\nUsing a Q Tip\n\n\n\n\nSoak one end of a q-tip in  rubbing alcohol (ethyl or isopropyl) and spread it on the exposed copper.\n\n\nTry to keep it off of the black paint, because we want that to stay.\n\n\nUse the other end of the q-tip to rub away, essentially polishing off the copper, making it shiny and ready for etching.\n\n\n\n\nUsing the Dremmel\n\n\n\n\nUse a dremmel with a soft wire brush to rub away the invisible layer left by the laser\n\n\n\n\nOther Suggestions\n\n\n\n\nMetholated Spirits for removing the thin layer left behind by brush on paint\n\n\nMineral Turpentine for removing the thin layer left behind by spray on paint\n\n\nUse a dish sponge to scrub the board", 
-            "title": "Cleaning the Board"
+            "location": "/OrangeLaser/Cutting/#warnings", 
+            "text": "The water pump must be running before cutting   \n     Otherwise you may cause damage to the Laser Cutter. This can be verified by checking the red light is on in the water cooling chamber    After Cutting make sure to leave the cutter on for at least 5 mins to allow the water pump to cool.   \n     Otherwise you may cause damage to the Laser Cutter    Make sure to watch over the cutter as it s cutting.   Rule 0 - don t be on fire", 
+            "title": "Warnings"
         }, 
         {
-            "location": "/PCB/Cleaning-Board/#cleaning-the-board", 
-            "text": "In the areas where the paint has been burnt away there is still a residue left over that needs to be cleaned away  \nTODO Check with Ruth on this", 
-            "title": "Cleaning the board"
+            "location": "/OrangeLaser/Cutting/#failure", 
+            "text": "", 
+            "title": "Failure"
         }, 
         {
-            "location": "/PCB/Cleaning-Board/#using-a-q-tip", 
-            "text": "Soak one end of a q-tip in  rubbing alcohol (ethyl or isopropyl) and spread it on the exposed copper.  Try to keep it off of the black paint, because we want that to stay.  Use the other end of the q-tip to rub away, essentially polishing off the copper, making it shiny and ready for etching.", 
-            "title": "Using a Q Tip"
+            "location": "/OrangeLaser/Cutting/#in-the-event-something-goes-wrong", 
+            "text": "Mail the mailing list with a short description of the problem  What you were trying to do  What you expected to happen  What happened instead    Put the out of order sign on the top of the cutter  Let the cutter cool down for 5 mins before turning off", 
+            "title": "In the event something goes wrong"
         }, 
         {
-            "location": "/PCB/Cleaning-Board/#using-the-dremmel", 
-            "text": "Use a dremmel with a soft wire brush to rub away the invisible layer left by the laser", 
-            "title": "Using the Dremmel"
+            "location": "/OrangeLaser/Cutting/#in-the-event-of-fire-emergency", 
+            "text": "There is an emergency stop button on the top panel that is functional. Opening the lid will stop the laser from firing however.  If you can smother the fire in-place using a piece of stock, do so.  If you cant smother it in place, put it on the floor and try to stomp it out.  If you cant do either of these. Leave the space immediately, and call 999. The address is Hackspace Manchester, 42 Edge Street, M4 1HN", 
+            "title": "In the event of fire / emergency"
         }, 
         {
-            "location": "/PCB/Cleaning-Board/#other-suggestions", 
-            "text": "Metholated Spirits for removing the thin layer left behind by brush on paint  Mineral Turpentine for removing the thin layer left behind by spray on paint  Use a dish sponge to scrub the board", 
-            "title": "Other Suggestions"
+            "location": "/OrangeLaser/Cutting/#control-panel", 
+            "text": "The big red button is used as a reset / emergency stop, this stops a laser job if it s in progress  The orange button in the center is used by nudging left and right for selecing menu entries  The red button is a  back  button in menus.   TODO   Attach a photo of the button layout", 
+            "title": "Control Panel"
         }, 
         {
-            "location": "/PCB/Etching-Tank/", 
-            "text": "Etching Tank\n\n\nNow we need to etch away the exposed copper\n\n\nCutting the Board\n\n\n\n\nCut the board to the right size using the bandsaw, this should require less etchant afterwards\n\n\n\n\nEtching the Board\n\n\n\n\nDip the board into Ferric Chloride for 20 - 30 mins\n\n\nuse the Heater to speed up the reaction.\n\n\n\n\nFinal Cleaning\n\n\n\n\nRinse the board with water\n\n\nNext wash the board with Acetone (paint remover)\n\n\nPolish to get rid of the paint\n\n\nTry rubbing the board with a sponge\n\n\nRinse again with water\n\n\n\n\nDrilling the Board\n\n\nUnfortunately it\ns not really practical to drill holes in the board with the laser\n\n\n\n\nFR1/2 type boards have chemicals which are toxic, this likley includes the SRBP boards from maplins (which is likley to be FR2)\n\n\nFR3 / 4 Boards use a different type of Epoxy which should be a lot safer than FR1/2\n\n\nHowever FR4 boards typically use Fibre Glass, trying to cut through this will likley leave a mess and a lot of charing\n\n\nFR3 boards may be the only option, but finding them may be difficult", 
-            "title": "Etching Tank"
+            "location": "/OrangeLaser/Cutting/#making-the-cut", 
+            "text": "", 
+            "title": "Making the Cut"
         }, 
         {
-            "location": "/PCB/Etching-Tank/#etching-tank", 
-            "text": "Now we need to etch away the exposed copper", 
-            "title": "Etching Tank"
+            "location": "/OrangeLaser/Cutting/#initial-startup", 
+            "text": "First place some money in the pot for using the cutter  There is a book for keeping track of usege of the laser so make sure to use this to track any iou s. Time log is in the front of the book, Money log is in the back.  Place the extractor pipe outside the window  Make sure the electronics bench is turned on, and the power cable is plugged into the back of the cutter.  Check for a red light on the bottom left hand corner where the water cooling is, if there is no light this may be an indication that the water cooling is not working in which case email a fault report to the mailing list.", 
+            "title": "Initial Startup"
         }, 
         {
-            "location": "/PCB/Etching-Tank/#cutting-the-board", 
-            "text": "Cut the board to the right size using the bandsaw, this should require less etchant afterwards", 
-            "title": "Cutting the Board"
+            "location": "/OrangeLaser/Cutting/#positioning-the-part", 
+            "text": "With the orange laser the only thing to worry about is the Z axis.\nThere is a switch on the right hand side of the machine that can be used to lower or raise the main bed of the machine.  \nIt s a bit slow for now, but make sure not to crash the bed into the laser head, since currently there isn t a limit switch installed  There is a small wooden guide inside the machine that can be used to position / zero the height against the bed (the default position).\nThis goes in between the bed and the left-hand part of the laser cutter, as in the following photo:  TODO Add Image   For cutting materials up to 6mm it s best to have the z height set to bed level.  For cutting materials over 6mm, try to keep the z height 6mm into the material. Multiple passes may be needed.  For engraving set the focal point to the height of the material by placing the guide on top of it.  If you want crisp engraving on thick stock, you will need to do a 2-stage engrave / cut with the focal point initially set to the top of your material, and then re-set to the correct height for your cut.  Place the part into the cutter  When cutting try to leave the cover on both sides of the material, or if only one side the bottom (not the top)", 
+            "title": "Positioning the part"
         }, 
         {
-            "location": "/PCB/Etching-Tank/#etching-the-board", 
-            "text": "Dip the board into Ferric Chloride for 20 - 30 mins  use the Heater to speed up the reaction.", 
-            "title": "Etching the Board"
+            "location": "/OrangeLaser/Cutting/#test-the-laser-positioning", 
+            "text": "Next we re going to do a boundary test to make sure the laser cutter is working on the area we think it s going to   Click Execute in Visicut  Wait for the small LCD on the Cutter it to say the file name  Nudge the center orange button to the right to select boundary  Press the center orange button, this will cause the laser to trace the box outline of where the cut will be done on the material  This can be done with the lid open to assist in placing your part, however watch for pinch hazards.  Also an indication of the size of the boundary area will be shown on the LCD  Press the orange button again to go back to the main menu", 
+            "title": "Test the Laser positioning"
         }, 
         {
-            "location": "/PCB/Etching-Tank/#final-cleaning", 
-            "text": "Rinse the board with water  Next wash the board with Acetone (paint remover)  Polish to get rid of the paint  Try rubbing the board with a sponge  Rinse again with water", 
-            "title": "Final Cleaning"
+            "location": "/OrangeLaser/Cutting/#do-the-cut", 
+            "text": "At this stage you should now be ready to do the cut for real   Make sure the lid is closed, The laser wont fire with it open.  The LCD should show Run on the screen  Press the orange button to start the run job", 
+            "title": "Do the cut"
         }, 
         {
-            "location": "/PCB/Etching-Tank/#drilling-the-board", 
-            "text": "Unfortunately it s not really practical to drill holes in the board with the laser   FR1/2 type boards have chemicals which are toxic, this likley includes the SRBP boards from maplins (which is likley to be FR2)  FR3 / 4 Boards use a different type of Epoxy which should be a lot safer than FR1/2  However FR4 boards typically use Fibre Glass, trying to cut through this will likley leave a mess and a lot of charing  FR3 boards may be the only option, but finding them may be difficult", 
-            "title": "Drilling the Board"
+            "location": "/OrangeLaser/Cutting/#shutdown", 
+            "text": "Make sure to bring the pipe back in from outside of the window  After making any kind of cut, make sure to run the cutter for at least 5mins to allow the water pump to cool down the cutter, otherwise bad things may happen  There is a red switch on the back for turning off the laser, but once in place it should be on most of the time anyway", 
+            "title": "Shutdown"
         }, 
         {
-            "location": "/PCB/SolderPaste-Stencil/", 
-            "text": "Solder Paste Stencil\n\n\nIt\ns possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets\n\n\nExport the Solder Paste Layer\n\n\nFirst export the paste layers from KiCad\n\n\n\n\nMake sure \nUse auxiliary axis as origin is ticked\n\n\nTick the Front and Back paste layers\n\n\n\n\n \n\n\nImport to FlatCAM\n\n\nNext import to flatcam, then re-export as an SVG\n\n\n \n\n\nImport to Visicut\n\n\nFinaly drag and drop the svg into Visicut and use Map by colour\n\n\nTODO see if Engrave Solid is the best option even though we\nre cutting through for accuracy\nalso what power to use?", 
-            "title": "Solder Paste Mylar"
+            "location": "/OrangeLaser/Materials/", 
+            "text": "Materials\n\n\nStandard Materials\n\n\nHobarts\n\n\nOne source for Acrylic for cutting is Hobarts \n\nSee the mailing list\n\n\n\n\nhttp://www.hobarts.com/store/\n\n\n\n\nFred Aldous\n\n\nAnother place local within manchester is Fred Aldous\n\n\n\n\nMain Website\n\n\nGoogle Maps Location\n\n\n\n\nThey sell some perspex / bits of wood, and glass paint for experimenting with pcb solder masks\n\n\nSpecial Materials / Cutting\n\n\nBurnable Materials / Mahogany\n\n\nWith some types of material one approach to cutting is to use a low power setting but with multiple passes \n\nHowever one thing to watch out for is that you may end up with a build up of carbon along the cut line\n\n\nAcrylic\n\n\nOne approach to making a 3D thing is to use Acrylic then glue the parts together. \n\n3mm Acrylic A4 size is fairly cheap from Fred Aldous about about 3 pound\n\n\nAcrylic glue appears to work by softening both sides and melting them together.\nBut it\ns important to use sand paper fine grit, or perhaps the belt sander to get a smooth edge first", 
+            "title": "Materials"
         }, 
         {
-            "location": "/PCB/SolderPaste-Stencil/#solder-paste-stencil", 
-            "text": "It s possible to create a solder paste mask using the laser cutter and A4 Mylar stencil sheets", 
-            "title": "Solder Paste Stencil"
+            "location": "/OrangeLaser/Materials/#materials", 
+            "text": "", 
+            "title": "Materials"
         }, 
         {
-            "location": "/PCB/SolderPaste-Stencil/#export-the-solder-paste-layer", 
-            "text": "First export the paste layers from KiCad   Make sure  Use auxiliary axis as origin is ticked  Tick the Front and Back paste layers", 
-            "title": "Export the Solder Paste Layer"
+            "location": "/OrangeLaser/Materials/#standard-materials", 
+            "text": "", 
+            "title": "Standard Materials"
         }, 
         {
-            "location": "/PCB/SolderPaste-Stencil/#import-to-flatcam", 
-            "text": "Next import to flatcam, then re-export as an SVG", 
-            "title": "Import to FlatCAM"
+            "location": "/OrangeLaser/Materials/#hobarts", 
+            "text": "One source for Acrylic for cutting is Hobarts  \nSee the mailing list   http://www.hobarts.com/store/", 
+            "title": "Hobarts"
         }, 
         {
-            "location": "/PCB/SolderPaste-Stencil/#import-to-visicut", 
-            "text": "Finaly drag and drop the svg into Visicut and use Map by colour  TODO see if Engrave Solid is the best option even though we re cutting through for accuracy\nalso what power to use?", 
-            "title": "Import to Visicut"
+            "location": "/OrangeLaser/Materials/#fred-aldous", 
+            "text": "Another place local within manchester is Fred Aldous   Main Website  Google Maps Location   They sell some perspex / bits of wood, and glass paint for experimenting with pcb solder masks", 
+            "title": "Fred Aldous"
         }, 
         {
-            "location": "/PCB/SolderMask/", 
-            "text": "Solder Masks\n\n\nSolder masks are good for two reasons\n\n\n\n\nThey help solder paste to stick to just they\nre own pads during reflow\n\n\nThey can make the board look pretty\n\n\n\n\nOverview\n\n\nNormally solder masks are only available on prefabbed boards, and even then the colour is usually just a single colour.\nOne of the techniques used online to create homebrew solder masks is the use of glass paint.\nThe reason for using glass paint is that once it\ns cured it\ns very heat resistant (such as during soldering).\nAlso spraying instead of brushing the board leads to better results from what I\nve heard online\n\n\nThe idea is (and this is untested) in order to make sure the glass paint doesn\nt stick to the solder pads\nwe can remove the black paint from the board everywhere except for the solder pads using a negative image / engrave solid.\nThis way after the glass paint has been sprayed on and dried, we can remove it from the solder pad areas using some ipa.\n\n\nThis is still untested as of yet, but FlatCAM does allow us to create the negative image SVG we need quite easily.\nAlso this could allow for some really fancy colourful PCB\ns that you wouldn\nt normally be able to get with prefabbed boards.\n\n\nSo far I\nve seen people use vitrea glass paint, although Fred Aldous has some available we can try and experiment with as well.\n\n\nTODO Check board alignment\n\n\nKiCad Export Gerber\n\n\nTODO need both pad regions and solder paste regions\nAlso export with border\n\n\nFlatCam - Create Non Pad Region\n\n\n\n\nNext import your gerber into FlatCAM, this gerber should represent all the solder pads to be left exposed\n\n\nThen select it, and switch across to the Selected Tab\n\n\nUnder \nNon Copper regions\n, click \nGenerate Geometry\n\n\nFinally export this geometry as an SVG\n\n\n\n\nTODO image\n\n\nEditing within Inkscape\n\n\nNext we need to do a small amount of editing within inkscape\n\n\n\n\nImport the SVG exported from FlatCAM\n\n\nUngroup the contents as much as possible\n\n\nSelect the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255\n\n\nMake sure the Opacity is also set to 100\n\n\nChange the colour to something solid like bright red\n\n\n\n\nTODO Image\n\n\nImport into Visicut\n\n\nNext import the SVG into Visicut\n\n\n\n\nSelect Map by Colour\n\n\nSelect Engrave Solid for the bright red colour mentioned above\n\n\nThis should highlight all the non solder pad areas as areas to be engraved.\n\n\n\n\nTODO Image\n\n\nSpray the board\n\n\nTODO\n\n\nClean the board\n\n\nTODO", 
-            "title": "Solder Mask"
+            "location": "/OrangeLaser/Materials/#special-materials-cutting", 
+            "text": "", 
+            "title": "Special Materials / Cutting"
         }, 
         {
-            "location": "/PCB/SolderMask/#solder-masks", 
-            "text": "Solder masks are good for two reasons   They help solder paste to stick to just they re own pads during reflow  They can make the board look pretty", 
-            "title": "Solder Masks"
+            "location": "/OrangeLaser/Materials/#burnable-materials-mahogany", 
+            "text": "With some types of material one approach to cutting is to use a low power setting but with multiple passes  \nHowever one thing to watch out for is that you may end up with a build up of carbon along the cut line", 
+            "title": "Burnable Materials / Mahogany"
         }, 
         {
-            "location": "/PCB/SolderMask/#overview", 
-            "text": "Normally solder masks are only available on prefabbed boards, and even then the colour is usually just a single colour.\nOne of the techniques used online to create homebrew solder masks is the use of glass paint.\nThe reason for using glass paint is that once it s cured it s very heat resistant (such as during soldering).\nAlso spraying instead of brushing the board leads to better results from what I ve heard online  The idea is (and this is untested) in order to make sure the glass paint doesn t stick to the solder pads\nwe can remove the black paint from the board everywhere except for the solder pads using a negative image / engrave solid.\nThis way after the glass paint has been sprayed on and dried, we can remove it from the solder pad areas using some ipa.  This is still untested as of yet, but FlatCAM does allow us to create the negative image SVG we need quite easily.\nAlso this could allow for some really fancy colourful PCB s that you wouldn t normally be able to get with prefabbed boards.  So far I ve seen people use vitrea glass paint, although Fred Aldous has some available we can try and experiment with as well.  TODO Check board alignment", 
-            "title": "Overview"
+            "location": "/OrangeLaser/Materials/#acrylic", 
+            "text": "One approach to making a 3D thing is to use Acrylic then glue the parts together.  \n3mm Acrylic A4 size is fairly cheap from Fred Aldous about about 3 pound  Acrylic glue appears to work by softening both sides and melting them together.\nBut it s important to use sand paper fine grit, or perhaps the belt sander to get a smooth edge first", 
+            "title": "Acrylic"
         }, 
         {
-            "location": "/PCB/SolderMask/#kicad-export-gerber", 
-            "text": "TODO need both pad regions and solder paste regions\nAlso export with border", 
-            "title": "KiCad Export Gerber"
+            "location": "/OrangeLaser/Ideas/", 
+            "text": "Ideas\n\n\nList of experimental things to try\n\n\nCermark\n\n\nCermark appears to be a type of paint that once applied to metal will cause it to be etched once a laser is fired at it.\nThe only down side is that it appears to be fairly expensive\n\n\nOne approach might be Isopropyl and Plaster\n\n\n\n\nhttp://hackaday.com/2014/12/25/laser-etch-stainless-with-only-plaster-alcohol/\n\n\nhttp://hackaday.com/2010/08/17/negative-laser-etching/\n\n\n\n\nKapton tape\n\n\nOne thing mentioned in this article is putting kapton tape over copper for it to interact with the laser \n\n\n\n\nhttp://hackaday.com/2014/12/25/laser-etch-stainless-with-only-plaster-alcohol/\n\n\n\n\nConductive Paint\n\n\nOne idea might be to experiment with conductive paint and copper plating on a laser friendly board", 
+            "title": "Ideas"
         }, 
         {
-            "location": "/PCB/SolderMask/#flatcam-create-non-pad-region", 
-            "text": "Next import your gerber into FlatCAM, this gerber should represent all the solder pads to be left exposed  Then select it, and switch across to the Selected Tab  Under  Non Copper regions , click  Generate Geometry  Finally export this geometry as an SVG   TODO image", 
-            "title": "FlatCam - Create Non Pad Region"
+            "location": "/OrangeLaser/Ideas/#ideas", 
+            "text": "List of experimental things to try", 
+            "title": "Ideas"
         }, 
         {
-            "location": "/PCB/SolderMask/#editing-within-inkscape", 
-            "text": "Next we need to do a small amount of editing within inkscape   Import the SVG exported from FlatCAM  Ungroup the contents as much as possible  Select the Fill and Stroke of the background colour (since this is a Negative) and set the Alpha to 255  Make sure the Opacity is also set to 100  Change the colour to something solid like bright red   TODO Image", 
-            "title": "Editing within Inkscape"
+            "location": "/OrangeLaser/Ideas/#cermark", 
+            "text": "Cermark appears to be a type of paint that once applied to metal will cause it to be etched once a laser is fired at it.\nThe only down side is that it appears to be fairly expensive  One approach might be Isopropyl and Plaster   http://hackaday.com/2014/12/25/laser-etch-stainless-with-only-plaster-alcohol/  http://hackaday.com/2010/08/17/negative-laser-etching/", 
+            "title": "Cermark"
         }, 
         {
-            "location": "/PCB/SolderMask/#import-into-visicut", 
-            "text": "Next import the SVG into Visicut   Select Map by Colour  Select Engrave Solid for the bright red colour mentioned above  This should highlight all the non solder pad areas as areas to be engraved.   TODO Image", 
-            "title": "Import into Visicut"
+            "location": "/OrangeLaser/Ideas/#kapton-tape", 
+            "text": "One thing mentioned in this article is putting kapton tape over copper for it to interact with the laser    http://hackaday.com/2014/12/25/laser-etch-stainless-with-only-plaster-alcohol/", 
+            "title": "Kapton tape"
         }, 
         {
-            "location": "/PCB/SolderMask/#spray-the-board", 
-            "text": "TODO", 
-            "title": "Spray the board"
-        }, 
-        {
-            "location": "/PCB/SolderMask/#clean-the-board", 
-            "text": "TODO", 
-            "title": "Clean the board"
-        }, 
-        {
-            "location": "/PCB/Further-Ideas/", 
-            "text": "Further Ideas\n\n\n\n\n\n\nConstruct a Jig with some pins / then pre-drill the board with holes that align \n\n    the idea is to keep the placement when the board is flipped over for double sided boards\n    http://www.instructables.com/id/Double-sided-PCBs-with-a-laser-cutter/\n\n\n\n\n\n\nLook into Mylar / Kapton solder paste stencils\n\n\n\n\n\n\nUse coats of Glass paint Pebeo Vitrea for the solder mask / use the laser to remove paint on the pads before final curing\n\n\n\n\nAdd docs for Eagle gerber export\n\n\nConsult with Ruth on the best approaches to remove the risidual left over paint via IPA\n\n\nFor the paint check what Fred Aldous has available / Halfords", 
-            "title": "Further Ideas"
-        }, 
-        {
-            "location": "/PCB/Further-Ideas/#further-ideas", 
-            "text": "Construct a Jig with some pins / then pre-drill the board with holes that align  \n    the idea is to keep the placement when the board is flipped over for double sided boards\n    http://www.instructables.com/id/Double-sided-PCBs-with-a-laser-cutter/    Look into Mylar / Kapton solder paste stencils    Use coats of Glass paint Pebeo Vitrea for the solder mask / use the laser to remove paint on the pads before final curing   Add docs for Eagle gerber export  Consult with Ruth on the best approaches to remove the risidual left over paint via IPA  For the paint check what Fred Aldous has available / Halfords", 
-            "title": "Further Ideas"
-        }, 
-        {
-            "location": "/PCB/Links/", 
-            "text": "Links\n\n\n\n\nhttp://thelittlebox.co/\n\n\nhttp://www.diyouware.com/\n\n\n\n\nhttp://www.diyouware.com/node/161\n\n\n\n\n\n\nhttp://hackaday.com/2010/08/17/negative-laser-etching/\n\n\n\n\nhttp://www.flickr.com/photos/rileyporter/sets/72157622690487871/with/4393053680/\n\n\nhttps://www.synthetos.com/laser-etched-pcbs/\n\n\nhttps://www.synthetos.com/laser-etched-pcbs-take-2/\n\n\nhttp://yveslebrac.blogspot.co.uk/\n\n\nhttp://www.instructables.com/id/Custom-PCB-Prototyping-using-a-Laser-Cutter/\n\n\nhttp://www.instructables.com/id/PCB-plastic-mask-etching-with-CO2-laser/\n\n\nhttp://forums.reprap.org/read.php?133,235148\n\n\nhttp://nerdclub-uk.blogspot.co.uk/2013/04/laser-etching-pcbs-update-dont-bother.html\n\n\nhttps://www.youtube.com/watch?v=mzmjGz0_joM\n\n\n\n\nhttp://hackaday.com/2011/09/09/laser-etched-pcb-production/\n\n\n\n\n\n\nhttp://hackaday.com/2014/02/03/laser-based-pcb-printer/\n\n\n\n\nhttp://hackaday.com/2013/05/11/laser-cutter-helps-make-dual-sided-pcbs/\n\n\nhttp://hackaday.com/2013/01/22/laser-cut-pcbs/\n\n\nhttp://hackaday.com/2014/02/13/from-schematic-to-pcb-in-four-hours/\n\n\nhttp://hackaday.com/2014/01/31/cnlohr-demos-his-photoetch-pcb-process/\n\n\nhttp://hackaday.com/2014/01/27/toner-transfer-pcbs-double-sided-with-color-silkscreen/\n\n\nhttp://hackaday.com/2014/01/14/creating-pcbs-with-3d-resin-printers/\n\n\nhttp://hackaday.com/2014/01/05/testing-the-limits-of-home-pcb-etching/\n\n\nhttp://hackaday.com/2013/11/02/perfect-pcbs-with-an-inkjet-printer/\n\n\nhttp://hackaday.com/2013/07/29/pcbs-with-powder-coat/\n\n\nhttp://hackaday.com/2011/05/22/bamf2011-lasersaur-is-one-big-laser-cutter/\n\n\nhttp://hackaday.com/2009/10/25/diy-plotter-with-laser/\n\n\n\n\nhttp://hackaday.com/2008/08/03/laser-etching-printed-circuit-boards/\n\n\n\n\n\n\nhttp://hackaday.com/2013/04/03/homebuilt-laser-cutter-ideas/\n\n\n\n\nhttp://hackaday.com/2012/09/10/put-a-solder-mask-on-those-homebrew-pcbs/\n\n\nhttp://hackaday.com/2013/02/07/pcb-production-workshop-means-everyone-gets-an-arduino/\n\n\nhttp://hackaday.com/2012/08/30/etching-your-own-pcbs-at-home/\n\n\nhttp://hackaday.com/2009/10/13/how-to-populate-a-surface-mount-pcb/\n\n\nhttp://hackaday.com/2009/04/21/making-cool-looking-pcbs/\n\n\nhttp://hackaday.com/2008/07/28/how-to-etch-a-single-sided-pcb/\n\n\nhttp://hackaday.com/2008/03/30/pcb-milling-hell-sunday-extra/\n\n\nhttp://hackaday.com/2012/04/30/etching-your-own-boards-really-really-fast/", 
-            "title": "Links"
-        }, 
-        {
-            "location": "/PCB/Links/#links", 
-            "text": "http://thelittlebox.co/  http://www.diyouware.com/   http://www.diyouware.com/node/161    http://hackaday.com/2010/08/17/negative-laser-etching/   http://www.flickr.com/photos/rileyporter/sets/72157622690487871/with/4393053680/  https://www.synthetos.com/laser-etched-pcbs/  https://www.synthetos.com/laser-etched-pcbs-take-2/  http://yveslebrac.blogspot.co.uk/  http://www.instructables.com/id/Custom-PCB-Prototyping-using-a-Laser-Cutter/  http://www.instructables.com/id/PCB-plastic-mask-etching-with-CO2-laser/  http://forums.reprap.org/read.php?133,235148  http://nerdclub-uk.blogspot.co.uk/2013/04/laser-etching-pcbs-update-dont-bother.html  https://www.youtube.com/watch?v=mzmjGz0_joM   http://hackaday.com/2011/09/09/laser-etched-pcb-production/    http://hackaday.com/2014/02/03/laser-based-pcb-printer/   http://hackaday.com/2013/05/11/laser-cutter-helps-make-dual-sided-pcbs/  http://hackaday.com/2013/01/22/laser-cut-pcbs/  http://hackaday.com/2014/02/13/from-schematic-to-pcb-in-four-hours/  http://hackaday.com/2014/01/31/cnlohr-demos-his-photoetch-pcb-process/  http://hackaday.com/2014/01/27/toner-transfer-pcbs-double-sided-with-color-silkscreen/  http://hackaday.com/2014/01/14/creating-pcbs-with-3d-resin-printers/  http://hackaday.com/2014/01/05/testing-the-limits-of-home-pcb-etching/  http://hackaday.com/2013/11/02/perfect-pcbs-with-an-inkjet-printer/  http://hackaday.com/2013/07/29/pcbs-with-powder-coat/  http://hackaday.com/2011/05/22/bamf2011-lasersaur-is-one-big-laser-cutter/  http://hackaday.com/2009/10/25/diy-plotter-with-laser/   http://hackaday.com/2008/08/03/laser-etching-printed-circuit-boards/    http://hackaday.com/2013/04/03/homebuilt-laser-cutter-ideas/   http://hackaday.com/2012/09/10/put-a-solder-mask-on-those-homebrew-pcbs/  http://hackaday.com/2013/02/07/pcb-production-workshop-means-everyone-gets-an-arduino/  http://hackaday.com/2012/08/30/etching-your-own-pcbs-at-home/  http://hackaday.com/2009/10/13/how-to-populate-a-surface-mount-pcb/  http://hackaday.com/2009/04/21/making-cool-looking-pcbs/  http://hackaday.com/2008/07/28/how-to-etch-a-single-sided-pcb/  http://hackaday.com/2008/03/30/pcb-milling-hell-sunday-extra/  http://hackaday.com/2012/04/30/etching-your-own-boards-really-really-fast/", 
-            "title": "Links"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/", 
-            "text": "Kicad - Design\n\n\nNote this is an older doc I\nve kept for info, it\ns better to use the Gerber method instead because it\ns easier\n\n\nThe below lists the steps needed to export a KiCad PCB for use with the laser cutter.\n\n\nPCB Design\n\n\nThe first step is to open the PCB Design within KiCad\n\n\n \n\n\nExport Top Layer\n\n\nNext we\nre going to export the top layer as an SVG image\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\n\n\n\n\n\n\nIt\ns best to avoid the use of the File -\n Export Svg option since that doesn\nt allow for a negative to be created, instead we\nre going to use Plot\n\n\n\n\n\n\nIt\ns also best to draw a square around the board on the \nEdge Cuts\n Layer, make sure it doesn\nt come into contact with any of the pins\n\n\n\n\n\n\n\n\n\n\nSelect \nFile -\n Plot\n\n\nSelect the Front Copper Layer on the left\n\n\nSelect the Output directory \nsvg/\n\n\nSelect Drill marks: \nSmall\n\n\nNegative plot: \nTicked\n\n\nMirrored Plot: \nUnticked\n for the front layer\n\n\nExclude PCB edge layer from other layers: \nUnticked\n To include the Outer cut line\n\n\n\n\n \n\n\nClick \nPlot\n to export the svg\n\n\nExport Bottom Layer\n\n\nNext for the bottom layer repeat as above but make the following changes\n\n\n\n\nSelect the Bottom Copper Layer on the left, unselect the Front Layer\n\n\nMirrored Plot: \nTicked\n for the bottom layer\n\n\n\n\n \n\n\nClick \nPlot\n to export the svg\n\n\nInkscape Edit\n\n\nNext we need to resize a couple of things within inkscape.\n\n\nFirst we want to resize the actual Document\n\n\n\n\nOpen each svg within inkscape\n\n\nOpen up File -\n Document Properties\n\n\nSelect the white box surrounding the Board\n\n\nExpand the \nResize page to content\n\n\nClick \nResize page to drawing or selection\n with the white outer box selected\n\n\n\n\n \n\n\nNext we need to resize the big black box that surrounds the box so that it fits within the document, this is acting as a mask\n\n\n\n\nSelect the white outline box, and select \nEdit -\n Copy\n\n\nSelect the Outer black box and Select \nEdit -\n Paste Size -\n Paste Size\n\n\nAt the top Enter X: 0 Y: 0 to position the box at the bottom left corner\n\n\n\n\n \n\n\nExamples\n\n\nSome svg\ns of adafruit\ns pcb ruler for testing how small can we go\n\n\n\n\nhttps://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg\n\n\n\n\nA test of the pcb I replicated from the arduino cnc project, I\nve got no plan on using this (just created it to confirm the wiring is what I thought it was), but maybe a good test\n\n\n\n\nFront Layer\n\n\nBack Layer\n\n\n\n\nTODO\n\n\n\n\nNone of this is tested so far\n\n\nOne suggestion is that lines should be no thinner than 1.5pt, 5pt font. Further experimentation is needed\n\n\nI could do with trying to print adafruit\ns PCB ruler as a test.", 
-            "title": "Kicad - Exporting as SVG"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#kicad-design", 
-            "text": "Note this is an older doc I ve kept for info, it s better to use the Gerber method instead because it s easier  The below lists the steps needed to export a KiCad PCB for use with the laser cutter.", 
-            "title": "Kicad - Design"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#pcb-design", 
-            "text": "The first step is to open the PCB Design within KiCad", 
-            "title": "PCB Design"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#export-top-layer", 
-            "text": "Next we re going to export the top layer as an SVG image     Notes      It s best to avoid the use of the File -  Export Svg option since that doesn t allow for a negative to be created, instead we re going to use Plot    It s also best to draw a square around the board on the  Edge Cuts  Layer, make sure it doesn t come into contact with any of the pins      Select  File -  Plot  Select the Front Copper Layer on the left  Select the Output directory  svg/  Select Drill marks:  Small  Negative plot:  Ticked  Mirrored Plot:  Unticked  for the front layer  Exclude PCB edge layer from other layers:  Unticked  To include the Outer cut line      Click  Plot  to export the svg", 
-            "title": "Export Top Layer"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#export-bottom-layer", 
-            "text": "Next for the bottom layer repeat as above but make the following changes   Select the Bottom Copper Layer on the left, unselect the Front Layer  Mirrored Plot:  Ticked  for the bottom layer      Click  Plot  to export the svg", 
-            "title": "Export Bottom Layer"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#inkscape-edit", 
-            "text": "Next we need to resize a couple of things within inkscape.  First we want to resize the actual Document   Open each svg within inkscape  Open up File -  Document Properties  Select the white box surrounding the Board  Expand the  Resize page to content  Click  Resize page to drawing or selection  with the white outer box selected      Next we need to resize the big black box that surrounds the box so that it fits within the document, this is acting as a mask   Select the white outline box, and select  Edit -  Copy  Select the Outer black box and Select  Edit -  Paste Size -  Paste Size  At the top Enter X: 0 Y: 0 to position the box at the bottom left corner", 
-            "title": "Inkscape Edit"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#examples", 
-            "text": "Some svg s of adafruit s pcb ruler for testing how small can we go   https://github.com/grbd/CAD.OxBot.Circuit/tree/master/Tests/AdafruitPCBRuller/svg   A test of the pcb I replicated from the arduino cnc project, I ve got no plan on using this (just created it to confirm the wiring is what I thought it was), but maybe a good test   Front Layer  Back Layer", 
-            "title": "Examples"
-        }, 
-        {
-            "location": "/PCB/KiCad-Svg/#todo", 
-            "text": "None of this is tested so far  One suggestion is that lines should be no thinner than 1.5pt, 5pt font. Further experimentation is needed  I could do with trying to print adafruit s PCB ruler as a test.", 
-            "title": "TODO"
+            "location": "/OrangeLaser/Ideas/#conductive-paint", 
+            "text": "One idea might be to experiment with conductive paint and copper plating on a laser friendly board", 
+            "title": "Conductive Paint"
         }
     ]
 }
