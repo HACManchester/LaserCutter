@@ -8,20 +8,6 @@ pages:
     - Materials: OrangeLaser/Materials.md
     - Ideas: OrangeLaser/Ideas.md
 
-- PCB:
-    - Overview: PCB/Overview.md
-    - Kicad - Exporting Gerbers: PCB/Kicad-GerberExport.md
-    - FlatCAM - Single Sided Boards: PCB/FlatCAM-SingleSided.md
-    - Prepping the Board: PCB/CopperBoard-Prep.md
-    - Laser Engraving: PCB/Laser-Engraving.md
-    - Cleaning the Board: PCB/Cleaning-Board.md
-    - Etching Tank: PCB/Etching-Tank.md
-    - Solder Paste Mylar: PCB/SolderPaste-Stencil.md
-    - Solder Mask: PCB/SolderMask.md
-    - Further Ideas: PCB/Further-Ideas.md
-    - Links: PCB/Links.md
-    - Kicad - Exporting as SVG: PCB/KiCad-Svg.md
-
 theme: slate
 #theme: alabaster
 #theme: readthedocs
